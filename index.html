@@ -6,23 +6,145 @@
 <title>Vashishta — Product & UX Design Leader</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #111010;
-    --paper: #F7F5F0;
+    --paper: #FFFFFF;
     --accent: #C8502A;
     --muted: #888;
-    --border: #E0DDD7;
-    --serif: 'DM Serif Display', Georgia, serif;
-    --sans: 'DM Sans', system-ui, sans-serif;
+    --border: #E8E8E8;
+    --serif: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { font-family: var(--sans); background: var(--paper); color: var(--ink); font-size: 16px; line-height: 1.6; }
+  body { font-family: var(--sans); background: var(--paper); color: var(--ink); font-size: 16px; line-height: 1.65; }
+
+
+  /* ══ FULL SANS SERIF HEADLINES ══ */
+  .hero-title, .section-title, .case-title, .about-intro,
+  .about-big-headline, .contact-intro, .tl-role,
+  .work-card-title, .finding-card h4, .about-card h3,
+  h1, h2, h3 {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    font-weight: 700; letter-spacing: -0.02em;
+  }
+  .hero-title { font-weight: 800; letter-spacing: -0.03em;
+    font-size: clamp(2.3rem, 4.2vw, 3.57rem); }
+  .case-title { font-weight: 800; letter-spacing: -0.03em;
+    font-size: clamp(2.1rem, 4.2vw, 3.36rem); }
+  .about-big-headline { font-weight: 800; letter-spacing: -0.03em;
+    font-size: clamp(1.9rem, 3.68vw, 2.94rem); }
+  .section-title { font-weight: 700;
+    font-size: clamp(1.9rem, 3.15vw, 2.52rem); }
+  .contact-intro { font-weight: 700; font-size: 1.89rem; }
+  .hero-title em, .about-big-headline em, .case-title em {
+    font-style: italic; font-weight: 800; color: var(--accent);
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+  .stat-num, .result-num { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 800; }
+  .about-intro { font-weight: 700; font-size: clamp(1.4rem, 2.5vw, 2rem); line-height: 1.3; }
+
+  /* ══ BODY TEXT BREATHING ROOM ══ */
+  .case-body p { font-size: 1rem; line-height: 1.85; margin-bottom: 1.5rem; color: #333; font-weight: 400; }
+  .case-body h2 { font-size: 1.58rem; margin: 3rem 0 1rem; letter-spacing: -0.02em; font-weight: 700; }
+  .case-body h3 { font-size: 0.78rem; font-weight: 600; margin: 2rem 0 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+  .case-body ul, .case-body ol { margin: 0.75rem 0 1.5rem 1.25rem; }
+  .case-body ul li, .case-body ol li { font-size: 1rem; line-height: 1.8; margin-bottom: 0.5rem; color: #333; }
+  .hero-body { font-size: 1.05rem; line-height: 1.8; color: #444; font-weight: 400; }
+  .about-body p, .about-profile-block p, .about-card p { font-size: 0.95rem; line-height: 1.85; margin-bottom: 1.1rem; font-weight: 400; }
+  .tl-bullets li { font-size: 0.9rem; line-height: 1.75; padding: 0.25rem 0 0.25rem 1rem; }
+  .section-header { margin-bottom: 3.5rem; }
+  .work-card-body { padding: 1.75rem; }
+  .work-card-title { font-size: 1.31rem; line-height: 1.4; margin-bottom: 1rem; }
+  .case-subtitle { font-size: 1.05rem; color: #555; line-height: 1.8; max-width: 680px; font-weight: 400; }
+
+  /* ══ ROUNDED CORNERS ══ */
+  .work-card { border-radius: 12px !important; }
+  .work-card-thumb { border-radius: 12px 12px 0 0 !important; }
+  .result-item { border-radius: 10px !important; }
+  .tag, .work-card-tag { border-radius: 20px !important; }
+  .btn-primary, .btn-outline, .nav-cta { border-radius: 24px !important; }
+  .medium-cta { border-radius: 12px !important; }
+  .contact-channel { border-radius: 12px !important; }
+  .contact-availability { border-radius: 12px !important; }
+  .skill-block { border-radius: 10px; }
+  .finding-card { border-radius: 10px; }
+  .proto-link { border-radius: 10px; }
+  .case-callout { border-radius: 0 10px 10px 0; }
+  .sensitive-banner { border-radius: 0 12px 12px 0; }
+
+  /* ══ CASE STUDY WIDER LAYOUT ══ */
+  .case-body { max-width: 920px !important; }
+  .case-cover, .case-image-block, .case-video-block, .brix-carousel-wrap { max-width: 1100px !important; }
+  .case-hero { max-width: 1000px !important; }
+
+  /* ══ UNIFIED PAGE GUTTERS ══ */
+  .hero, .section, .about-hero-strip, .about-content-grid, .stats-inner {
+    padding-left: clamp(1.5rem, 5vw, 5rem);
+    padding-right: clamp(1.5rem, 5vw, 5rem);
+  }
+  @media (max-width: 900px) {
+    .hero, .section, .about-hero-strip, .about-content-grid, .stats-inner {
+      padding-left: clamp(1rem, 4vw, 2rem);
+      padding-right: clamp(1rem, 4vw, 2rem);
+    }
+  }
+  @media (max-width: 600px) {
+    .hero, .section, .about-hero-strip, .about-content-grid, .stats-inner {
+      padding-left: 1.25rem; padding-right: 1.25rem;
+    }
+  }
+
+  /* ══ DOODLE STRIP SPACING ══ */
+  .doodle-track { padding-top: 1.5rem !important; }
+  .doodle-strip-sub { text-align: left !important; }
+  .doodle-strip-right { text-align: left !important; }
+
+  /* ══ SENSITIVE BANNER ══ */
+  .sensitive-banner { display: flex; align-items: flex-start; gap: 1rem;
+    background: #F5F5F5; border: 1px solid var(--border); border-left: 3px solid var(--ink);
+    border-radius: 0 12px 12px 0; padding: 1.1rem 1.4rem; margin: 0 auto 2.5rem; max-width: 920px; }
+  .sensitive-banner-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 0.1rem; opacity: 0.6; }
+  .sensitive-banner-text { font-size: 0.85rem; color: #555; line-height: 1.7; }
+  .sensitive-banner-text strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 0.2rem; font-size: 0.88rem; }
+
+  /* ══ FOOTER ══ */
+  footer { border-top: 1px solid var(--border); }
+  .footer-inner { max-width: 1200px; margin: 0 auto; padding: 2.5rem clamp(1.5rem, 5vw, 5rem); }
+  .footer-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem; }
+  .footer-brand { display: flex; flex-direction: column; gap: 0.3rem; }
+  .footer-name { font-size: 0.95rem; font-weight: 600; color: var(--ink); }
+  .footer-role { font-size: 0.78rem; color: var(--muted); }
+  .footer-bottom { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+  .footer-bottom span { font-size: 0.72rem; color: var(--muted); line-height: 1.6; }
+  .footer-bottom a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--border); transition: color 0.2s, border-color 0.2s; }
+  .footer-bottom a:hover { color: var(--ink); border-color: var(--ink); }
+  .footer-socials { display: flex; gap: 1rem; align-items: center; }
+  .footer-socials a { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid var(--border); border-radius: 50%; color: var(--muted); text-decoration: none; transition: color 0.2s, border-color 0.2s, background 0.2s; }
+  .footer-socials a:hover { color: var(--ink); border-color: var(--ink); }
+  .footer-socials a svg { flex-shrink: 0; }
+  @media (max-width: 600px) {
+    .footer-top { flex-direction: column; gap: 1.5rem; }
+    .footer-inner { padding: 2rem 1.25rem; }
+  }
+
+  /* ══ WAVY NAV ACTIVE ══ */
+  .nav-links a { position: relative; }
+  .nav-links a.active::after { content: ''; position: absolute; bottom: -7px; left: -2px; right: -2px; height: 8px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='8' viewBox='0 0 40 8'%3E%3Cpath d='M0 5 Q5 1 10 5 Q15 9 20 5 Q25 1 30 5 Q35 9 40 5' stroke='%23C8502A' stroke-width='2.2' fill='none' stroke-linecap='round'%3E%3C/svg%3E");
+    background-repeat: repeat-x; background-size: 20px 8px; animation: waveDraw .45s ease forwards; }
+  @keyframes waveDraw { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+
+  /* ══ CONTACT SVG ICONS ══ */
+  .cc-icon { width: 40px; height: 40px; background: var(--paper); border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--ink); flex-shrink: 0; transition: background 0.2s, border-color 0.2s; }
+  .cc-icon svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .contact-channel:hover .cc-icon { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .contact-channel:hover .cc-icon svg { stroke: var(--paper); }
 
   /* NAV */
-  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem clamp(1.5rem, 5vw, 5rem); display: flex; justify-content: space-between; align-items: center; background: rgba(247,245,240,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem clamp(1.5rem, 5vw, 5rem); display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
   .nav-logo { font-family: var(--serif); font-size: 1.2rem; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a { font-size: 0.85rem; color: var(--muted); text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; }
@@ -145,7 +267,7 @@
 
   /* ABOUT PAGE */
   .about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 5rem; align-items: start; }
-  .about-photo { aspect-ratio: 3/4; background: linear-gradient(135deg, #e8e2d9 0%, #d4cfc6 100%); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 6rem; color: rgba(0,0,0,0.06); }
+  .about-photo { aspect-ratio: 3/4; background: linear-gradient(135deg, #EEEEEE 0%, #d4cfc6 100%); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 6rem; color: rgba(0,0,0,0.06); }
   .about-intro { font-family: var(--serif); font-size: 1.6rem; line-height: 1.4; letter-spacing: -0.02em; color: var(--ink); margin-bottom: 2rem; }
   .about-body p { font-size: 1rem; color: #444; line-height: 1.8; margin-bottom: 1.25rem; }
   .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2.5rem; }
@@ -165,8 +287,8 @@
   .case-meta-item span { font-size: 0.9rem; font-weight: 500; }
   .case-cover { max-width: 860px; margin: 3rem auto; padding: 0 clamp(1.5rem, 5vw, 5rem); }
   .case-cover img { width: 100%; height: auto; display: block; border-radius: 4px; }
-  .case-cover-wrap { width: 100%; border-radius: 4px; overflow: hidden; background: #f0ece4; }
-  .case-cover-img { width: 100%; aspect-ratio: 16/9; border-radius: 4px; background: linear-gradient(135deg, #f0ece4 0%, #ddd8d0 100%); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.5rem; color: rgba(0,0,0,0.12); }
+  .case-cover-wrap { width: 100%; border-radius: 4px; overflow: hidden; background: #F5F5F5; }
+  .case-cover-img { width: 100%; aspect-ratio: 16/9; border-radius: 4px; background: linear-gradient(135deg, #F5F5F5 0%, #E0E0E0 100%); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 1.5rem; color: rgba(0,0,0,0.12); }
   .case-body { max-width: 720px; margin: 0 auto; padding: 2.5rem clamp(1.5rem, 5vw, 5rem); }
   .case-body h2 { font-family: var(--serif); font-size: 1.6rem; margin: 2.5rem 0 1rem; letter-spacing: -0.02em; }
   .case-body h3 { font-size: 0.75rem; font-weight: 600; margin: 1.75rem 0 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
@@ -183,7 +305,7 @@
   .result-label { font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.4; }
   .case-image-block { width: 100%; max-width: 860px; margin: 2.5rem auto; padding: 0 clamp(1.5rem, 5vw, 5rem); }
   .case-image-block img { width: 100%; height: auto; display: block; border-radius: 4px; }
-  .case-image-block .img-wrap { width: 100%; background: #f7f5f0; border-radius: 4px; overflow: hidden; }
+  .case-image-block .img-wrap { width: 100%; background: #FFFFFF; border-radius: 4px; overflow: hidden; }
   .case-image-block figcaption { text-align: center; font-size: 0.75rem; color: var(--muted); margin-top: 0.75rem; font-style: italic; }
 
   /* MEDIUM CTA BANNER */
@@ -264,7 +386,7 @@
 
   /* DISCLAIMER BLOCK */
   .case-disclaimer {
-    background: #faf9f6;
+    background: #FFFFFF;
     border: 1px solid var(--border);
     border-left: 3px solid var(--muted);
     border-radius: 0 4px 4px 0;
@@ -857,7 +979,7 @@
       d="M-2 18 Q4 11 10 18 Q16 25 22 18 Q28 11 34 18 Q40 25 46 18 Q52 11 58 18 Q64 25 70 18 Q76 11 82 18 Q88 25 94 18 Q100 11 106 18"
       stroke="#C8502A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
 
-    <!-- Shape 1: circle — 3 concentric rings r=9,5.5,2.5, centred 16,18 -->
+    <!-- Shape 1: circle - 3 concentric rings r=9,5.5,2.5, centred 16,18 -->
     <path id="ds1"
       d="
         M16,9  a9,9   0 1,1 -0.001,0
@@ -866,14 +988,14 @@
       "
       stroke="#C8502A" stroke-width="2.2" stroke-linecap="round" fill="none"/>
 
-    <!-- Shape 2: triangle spiral — 3 nested, 4px spacing, centred 48,18 -->
+    <!-- Shape 2: triangle spiral - 3 nested, 4px spacing, centred 48,18 -->
     <path id="ds2"
       d="M48 7  L59 28 L37 28 Z
          M48 13 L55 26 L41 26 Z
          M48 18 L52 25 L44 25 Z"
       stroke="#C8502A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
 
-    <!-- Shape 3: square spiral — 3 nested 3px gap, centred 80,18 -->
+    <!-- Shape 3: square spiral - 3 nested 3px gap, centred 80,18 -->
     <path id="ds3"
       d="M71  9  L89  9  L89 27 L71 27 Z
          M74 12  L86 12  L86 24 L74 24 Z
@@ -971,14 +1093,7 @@
           <div class="work-card-meta"><span class="work-card-tag">Conversion Design</span><span class="work-card-tag">Notifications</span><span class="work-card-tag">A/B Testing</span></div>
         </div>
       </a>
-      <a class="work-card" href="#" onclick="showCase('brix')">
-        <div class="work-card-thumb c3"><img src="https://cdn-images-1.medium.com/max/1600/1*iOD5zOAqlu75muhE7AR_TA.png" alt="BRIX Dashboard" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div class="work-card-body">
-          <div class="work-card-company">Best Buy India · 2024–Present</div>
-          <div class="work-card-title">Our design system was healthy. Nobody outside the team knew it.</div>
-          <div class="work-card-meta"><span class="work-card-tag">Design Systems</span><span class="work-card-tag">Analytics</span><span class="work-card-tag">Data Viz</span></div>
-        </div>
-      </a>
+      
       
     </div>
   </div>
@@ -997,9 +1112,9 @@
         <div class="tl-role">Senior Experience Designer</div>
         <div class="tl-company">Best Buy India</div>
         <ul class="tl-bullets">
-          <li>Designed contextual nudges across the shopping journey with AI-driven accessibility flows — lifted push notification opt-ins to <strong>43% in Q3 2025</strong>.</li>
-          <li>Contributed to BRIX Design System analytics dashboard across 4 libraries (Enterprise, Icons, Legacy, Web) — saved <strong>100+ engineer hours</strong> per quarter.</li>
-          <li>Built scalable design components for cross-platform consistency — reduced visual inconsistencies by <strong>40%</strong>, cut handoff churn by <strong>30%</strong>.</li>
+          <li>Designed contextual nudges across the shopping journey with AI-driven accessibility flows - lifted push notification opt-ins to <strong>43% in Q3 2025</strong>.</li>
+          <li>Contributed to BRIX Design System analytics dashboard across 4 libraries (Enterprise, Icons, Legacy, Web) - saved <strong>100+ engineer hours</strong> per quarter.</li>
+          <li>Built scalable design components for cross-platform consistency - reduced visual inconsistencies by <strong>40%</strong>, cut handoff churn by <strong>30%</strong>.</li>
         </ul>
       </div>
       <div class="tl-item">
@@ -1007,7 +1122,7 @@
         <div class="tl-role">Contract UX/UI Designer</div>
         <div class="tl-company">BeyondTheLoop AI</div>
         <ul class="tl-bullets">
-          <li>Redesigned MVP into an enterprise SaaS workspace — guided LLM-choice cards, identity-aware in-chat switching. Reduced mid-session errors by <strong>40%</strong>.</li>
+          <li>Redesigned MVP into an enterprise SaaS workspace - guided LLM-choice cards, identity-aware in-chat switching. Reduced mid-session errors by <strong>40%</strong>.</li>
           <li>Designed component library and design token starter kit. PostHog analytics integration boosted <strong>DAUs 30%</strong> and NPS to <strong>4.3/5</strong>.</li>
         </ul>
       </div>
@@ -1033,10 +1148,10 @@
         <div class="tl-role">Lead UI/UX Designer</div>
         <div class="tl-company">Creativeland Asia Pvt Ltd</div>
         <ul class="tl-bullets">
-          <li>Defined IA and led Waves OTT app design system — launched at IFFI 2024, <strong>500K+ downloads in 3 months</strong>.</li>
+          <li>Defined IA and led Waves OTT app design system - launched at IFFI 2024, <strong>500K+ downloads in 3 months</strong>.</li>
           <li>Designed Petromin × Pirelli bilingual enterprise portal (Arabic/English, RTL+LTR) for <strong>10K+ automotive dealers</strong>.</li>
-          <li>Delivered NaMo App v3.0 IA redesign — <strong>3.6M content views</strong>, <strong>1.33M shares</strong> in 2 months.</li>
-          <li>Designed Godrej Housing Finance digital ecosystem — website, branding, partner portal, and customer portal.</li>
+          <li>Delivered NaMo App v3.0 IA redesign - <strong>3.6M content views</strong>, <strong>1.33M shares</strong> in 2 months.</li>
+          <li>Designed Godrej Housing Finance digital ecosystem - website, branding, partner portal, and customer portal.</li>
           <li>Collaborated on RollingStone India creator platform with integrated artist booking and monetisation flows.</li>
         </ul>
       </div>
@@ -1045,7 +1160,7 @@
         <div class="tl-role">Senior UX/UI Designer</div>
         <div class="tl-company">Guava Design Agency</div>
         <ul class="tl-bullets">
-          <li>Consolidated Strata Geosystems' 6 regional sites into one global enterprise platform — WCAG 2.1 compliant, support calls <strong>down 25%</strong>, inbound enquiries <strong>up 15%</strong>.</li>
+          <li>Consolidated Strata Geosystems' 6 regional sites into one global enterprise platform - WCAG 2.1 compliant, support calls <strong>down 25%</strong>, inbound enquiries <strong>up 15%</strong>.</li>
           <li>Defined design tokens and reusable component patterns for future scalability.</li>
         </ul>
       </div>
@@ -1054,9 +1169,9 @@
         <div class="tl-role">UX/UI Designer</div>
         <div class="tl-company">Creativeland Asia Pvt Ltd</div>
         <ul class="tl-bullets">
-          <li>BMW "Inspirator" — omnichannel booking platform (web + iPad showrooms). Reduced missed follow-ups <strong>30%</strong>, improved CSAT <strong>60%</strong>.</li>
-          <li>Automobili Pininfarina Battista — partner portal, asset dashboard, website, iOS app. Partner onboarding <strong>60% faster</strong>.</li>
-          <li>Voffis virtual office SaaS — customisable widgets and Dashboard Designer drove <strong>24% increase in engagement</strong>.</li>
+          <li>BMW "Inspirator" - omnichannel booking platform (web + iPad showrooms). Reduced missed follow-ups <strong>30%</strong>, improved CSAT <strong>60%</strong>.</li>
+          <li>Automobili Pininfarina Battista - partner portal, asset dashboard, website, iOS app. Partner onboarding <strong>60% faster</strong>.</li>
+          <li>Voffis virtual office SaaS - customisable widgets and Dashboard Designer drove <strong>24% increase in engagement</strong>.</li>
           <li>Redesigned Godrej corporate website, unifying 13 business units into one scalable digital ecosystem.</li>
         </ul>
       </div>
@@ -1065,7 +1180,7 @@
         <div class="tl-role">Textile Designer</div>
         <div class="tl-company">KSR Handlooms Pvt Ltd</div>
         <ul class="tl-bullets">
-          <li>Before UX, I worked in textiles. It taught me craft, materiality, and how people experience things through touch — still shows up in how I think about interaction.</li>
+          <li>Before UX, I worked in textiles. It taught me craft, materiality, and how people experience things through touch - still shows up in how I think about interaction.</li>
         </ul>
       </div>
     </div>
@@ -1100,15 +1215,7 @@
   </div>
 </div>
   </div>
-
-  <footer>
-    <p>© 2026 Vashishta Parikipandla &nbsp;·&nbsp; <span style="font-size:0.75rem;color:var(--muted);">Case studies contain representative data, altered for NDA compliance.</span></p>
-    <div class="footer-socials">
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://medium.com/@vashishta4381" target="_blank" rel="noopener noreferrer">Medium</a>
-      <a href="mailto:vashishta4381@gmail.com">Email</a>
-    </div>
-  </footer>
+</div>
 
 <!-- ===== WORK PAGE ===== -->
 <div class="page" id="page-work">
@@ -1153,16 +1260,9 @@
           <div class="work-card-meta"><span class="work-card-tag">Conversion Design</span><span class="work-card-tag">Notifications</span></div>
         </div>
       </a>
-      <a class="work-card" href="#" onclick="showCase('brix')">
-        <div class="work-card-thumb c3"><img src="https://cdn-images-1.medium.com/max/1600/1*iOD5zOAqlu75muhE7AR_TA.png" alt="BRIX Dashboard" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
-        <div class="work-card-body">
-          <div class="work-card-company">Best Buy India · 2024–Present</div>
-          <div class="work-card-title">Our design system was healthy. Nobody outside the team knew it.</div>
-          <div class="work-card-meta"><span class="work-card-tag">Design Systems</span><span class="work-card-tag">Analytics Dashboard</span></div>
-        </div>
-      </a>
+      
       <a class="work-card" href="#" onclick="showCase('dpdp')">
-        <div class="work-card-thumb c4"><img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*RHzI9nYoJkm3MNGk0c5JpA.png" alt="DPDP Act — Privasync" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
+        <div class="work-card-thumb c4"><img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*RHzI9nYoJkm3MNGk0c5JpA.png" alt="DPDP Act - Privasync" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top;"></div>
         <div class="work-card-body">
           <div class="work-card-company">AI-powered Sprint · 2024</div>
           <div class="work-card-title">India passed a data privacy law. We made it something users could actually use.</div>
@@ -1179,14 +1279,6 @@
       </a>
     </div>
   </div>
-  <footer>
-    <p>© 2026 Vashishta Parikipandla &nbsp;·&nbsp; <span style="font-size:0.75rem;color:var(--muted);">Case studies contain representative data, altered for NDA compliance.</span></p>
-    <div class="footer-socials">
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://medium.com/@vashishta4381" target="_blank" rel="noopener noreferrer">Medium</a>
-      <a href="mailto:vashishta4381@gmail.com">Email</a>
-    </div>
-  </footer>
 </div>
 
 <!-- ===== ABOUT PAGE ===== -->
@@ -1205,12 +1297,12 @@
       <div class="about-card">
         <span class="about-card-icon">✏️</span>
         <h3>I give strangers a blank page and steal their scribbles</h3>
-        <p>I ask people around me — friends, colleagues, strangers in workshops — to scribble anything, eyes closed, no plan. Then I take that mess and treat it like a puzzle. I find the character hiding in it and bring it to life. <strong>The scribble is theirs. The creature is mine.</strong> It's how I learned to see possibility in chaos — which turns out to be useful in design too.</p>
+        <p>I ask people around me - friends, colleagues, strangers in workshops - to scribble anything, eyes closed, no plan. Then I take that mess and treat it like a puzzle. I find the character hiding in it and bring it to life. <strong>The scribble is theirs. The creature is mine.</strong> It's how I learned to see possibility in chaos - which turns out to be useful in design too.</p>
       </div>
       <div class="about-card">
         <span class="about-card-icon">🍳</span>
         <h3>I cook with whatever's left</h3>
-        <p>Half an onion, leftover rice, a lemon going soft — and I try to make it taste intentional. The constraint — <strong>make something good out of what you have</strong> — is one I find genuinely enjoyable. Probably why I like design sprints.</p>
+        <p>Half an onion, leftover rice, a lemon going soft - and I try to make it taste intentional. The constraint - <strong>make something good out of what you have</strong> - is one I find genuinely enjoyable. Probably why I like design sprints.</p>
       </div>
       <div class="about-card">
         <span class="about-card-icon">✈️</span>
@@ -1220,7 +1312,7 @@
       <div class="about-card">
         <span class="about-card-icon">🤖</span>
         <h3>I build apps for my own problems</h3>
-        <p>When something bothers me enough, I build a thing — not a prototype, an actual working app. Claude, Cursor, Gemini, Figma Make. <strong>The line between wireframe and product is thinner than it used to be</strong> and I want to stay on both sides of it.</p>
+        <p>When something bothers me enough, I build a thing - not a prototype, an actual working app. Claude, Cursor, Gemini, Figma Make. <strong>The line between wireframe and product is thinner than it used to be</strong> and I want to stay on both sides of it.</p>
       </div>
     </div>
 
@@ -1229,8 +1321,8 @@
 
       <div class="about-profile-block">
         <p>I'm Vashishta. I studied textiles at <strong>NIFT Hyderabad</strong>, then did a Master's in <strong>Visual Communication at IIT Kanpur</strong>. I thought I'd end up in print or branding. Instead I spent the last <strong>8 years designing apps, dashboards, and platforms</strong> used by millions.</p>
-        <p>I've worked on <strong>products at every scale</strong> — apps with 400M users to internal tools used by twelve. The question is always the same: <em>does this make sense to the person using it?</em></p>
-        <p>Based in <strong>Bengaluru</strong>. Open to <strong>Lead, Staff, or Design Manager roles</strong> in India, Singapore, and Southeast Asia — somewhere design has a seat at the table before the decisions are already made.</p>
+        <p>I've worked on <strong>products at every scale</strong> - apps with 400M users to internal tools used by twelve. The question is always the same: <em>does this make sense to the person using it?</em></p>
+        <p>Based in <strong>Bengaluru</strong>. Open to <strong>Lead, Staff, or Design Manager roles</strong> in India, Singapore, and Southeast Asia - somewhere design has a seat at the table before the decisions are already made.</p>
       </div>
 
       <div class="about-meta-block">
@@ -1290,15 +1382,6 @@
 
     </div>
   </div>
-
-  <footer>
-    <p>© 2026 Vashishta Parikipandla &nbsp;·&nbsp; <span style="font-size:0.75rem;color:var(--muted);">Case studies contain representative data, altered for NDA compliance.</span></p>
-    <div class="footer-socials">
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://medium.com/@vashishta4381" target="_blank" rel="noopener noreferrer">Medium</a>
-      <a href="mailto:vashishta4381@gmail.com">Email</a>
-    </div>
-  </footer>
 </div>
 
 <!-- ===== CONTACT PAGE ===== -->
@@ -1309,14 +1392,14 @@
       <div class="contact-heading">
         <p class="section-label">Contact</p>
         <h2 class="contact-intro">Good work starts with<br>a good conversation.</h2>
-        <p class="contact-subtext">If you have a role, a project, or just a question — reach out. I reply to everything genuine.</p>
+        <p class="contact-subtext">If you have a role, a project, or just a question - reach out. I reply to everything genuine.</p>
       </div>
 
       <div class="contact-channels">
 
         <a class="contact-channel" href="mailto:vashishta4381@gmail.com">
           <div class="cc-left">
-            <div class="cc-icon">✉</div>
+            <div class="cc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
             <div class="cc-info">
               <div class="cc-label">Email</div>
               <div class="cc-value">vashishta4381@gmail.com</div>
@@ -1338,7 +1421,7 @@
 
         <a class="contact-channel" href="https://medium.com/@vashishta4381" target="_blank" rel="noopener noreferrer">
           <div class="cc-left">
-            <div class="cc-icon">M</div>
+            <div class="cc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></div>
             <div class="cc-info">
               <div class="cc-label">Medium</div>
               <div class="cc-value">Case studies &amp; design thinking</div>
@@ -1349,7 +1432,7 @@
 
         <a class="contact-channel" href="tel:+919032174686">
           <div class="cc-left">
-            <div class="cc-icon">☎</div>
+            <div class="cc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z"/></svg></div>
             <div class="cc-info">
               <div class="cc-label">Phone</div>
               <div class="cc-value">+91 90321 74686</div>
@@ -1360,7 +1443,7 @@
 
         <a class="contact-channel" href="https://www.instagram.com/namethedoodle" target="_blank" rel="noopener noreferrer">
           <div class="cc-left">
-            <div class="cc-icon">◎</div>
+            <div class="cc-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
             <div class="cc-info">
               <div class="cc-label">Instagram</div>
               <div class="cc-value">@namethedoodle</div>
@@ -1381,19 +1464,11 @@
 
     </div>
   </div>
-  <footer>
-    <p>© 2026 Vashishta Parikipandla &nbsp;·&nbsp; <span style="font-size:0.75rem;color:var(--muted);">Case studies contain representative data, altered for NDA compliance.</span></p>
-    <div class="footer-socials">
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      <a href="https://medium.com/@vashishta4381" target="_blank" rel="noopener noreferrer">Medium</a>
-      <a href="mailto:vashishta4381@gmail.com">Email</a>
-    </div>
-  </footer>
 </div>
 
 <!-- ===== CASE STUDY PAGES ===== -->
 
-<!-- CASE: MyJio — FULLY REWORKED -->
+<!-- CASE: MyJio - FULLY REWORKED -->
 <div class="page" id="page-case-myjio">
   <div class="case-hero">
     <button class="case-back" onclick="showPage('work')">← Back to work</button>
@@ -1410,12 +1485,12 @@
 
   <!-- Hero image -->
       <div class="case-disclaimer">
-      <p><strong>Disclaimer:</strong> All screens, data, metrics, and system references shown in this case study have been altered or abstracted for confidentiality and NDA compliance. Numbers are representative and do not reflect actual business figures or internal performance data. Brand names are used solely to describe the nature of the work and carry no commercial intent. This work was completed under NDA — nothing shown constitutes a breach of confidentiality. The design process, decisions, and methodologies described are my own contributions, presented for portfolio purposes only. All opinions are my own.</p>
+      <p><strong>Disclaimer:</strong> All screens, data, metrics, and system references shown in this case study have been altered or abstracted for confidentiality and NDA compliance. Numbers are representative and do not reflect actual business figures or internal performance data. Brand names are used solely to describe the nature of the work and carry no commercial intent. This work was completed under NDA - nothing shown constitutes a breach of confidentiality. The design process, decisions, and methodologies described are my own contributions, presented for portfolio purposes only. All opinions are my own.</p>
     </div>
 
   <div class="case-cover">
     <div class="case-cover-wrap">
-      <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*-4EptXaYoK_3isMKZek8Iw.png" alt="MyJio redesign — mini-app visibility" loading="lazy" width="900" height="506">
+      <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*-4EptXaYoK_3isMKZek8Iw.png" alt="MyJio redesign - mini-app visibility" loading="lazy" width="900" height="506">
     </div>
   </div>
 
@@ -1424,15 +1499,15 @@
     <h2>The Brief</h2>
     <p>MyJio had one job in most users' minds: check your data, recharge if needed, close the app. Jio had built JioGames, JioCinema, JioSaavn, JioNews and more on top of it. Most users had no idea. That was the problem.</p>
     <div class="case-callout">
-      <p>"Get people to actually use the mini-apps." — The brief, in plain terms</p>
+      <p>"Get people to actually use the mini-apps." - The brief, in plain terms</p>
     </div>
 
     <h2>Business Goals</h2>
     <p>We started with a 3-hour workshop with the Jio team. Three things came out of it:</p>
     <ul>
-      <li><strong>Get users into the mini-apps</strong> — use the homepage to surface apps they don't know about yet</li>
-      <li><strong>Give people a reason to stay</strong> — the app shouldn't feel like a utility bill payment page</li>
-      <li><strong>Show what Jio actually offers</strong> — especially to users considering switching networks</li>
+      <li><strong>Get users into the mini-apps</strong> - use the homepage to surface apps they don't know about yet</li>
+      <li><strong>Give people a reason to stay</strong> - the app shouldn't feel like a utility bill payment page</li>
+      <li><strong>Show what Jio actually offers</strong> - especially to users considering switching networks</li>
     </ul>
 
     <h2>My Contribution</h2>
@@ -1449,15 +1524,15 @@
   </figure>
 
   <div class="case-body">
-    <h3>1. Onboarding Stage — Key Findings</h3>
+    <h3>1. Onboarding Stage - Key Findings</h3>
     <ul>
       <li>The onboarding carousel auto-rotated with no visual cue. Most users never knew it was moving, let alone interactable.</li>
-      <li>Login was split into separate screens by service type — Mobile, Fiber, Fi. Confusing before you've even got in.</li>
+      <li>Login was split into separate screens by service type - Mobile, Fiber, Fi. Confusing before you've even got in.</li>
       <li>QR login was meant only for Fiber and JioLink users. It was shown to everyone. Wrong expectations every time.</li>
-      <li>"Not a Jio customer?" as the first message to non-Jio users — not a great welcome.</li>
+      <li>"Not a Jio customer?" as the first message to non-Jio users - not a great welcome.</li>
     </ul>
 
-    <h3>2. Home Screen & Search — Key Findings</h3>
+    <h3>2. Home Screen & Search - Key Findings</h3>
     <ul>
       <li>First thing after login: a popup about SIM and Fiber plans. A wasted chance to show what the app could do.</li>
       <li>11+ nav items in a horizontal scroll bar at the top. Getting to page 8 required real commitment.</li>
@@ -1466,7 +1541,7 @@
       <li>"View More" on every banner. It sounded like a redirect to the app store, not an invitation to explore.</li>
     </ul>
 
-    <h3>3. Navigation & IA — Key Findings</h3>
+    <h3>3. Navigation & IA - Key Findings</h3>
     <ul>
       <li>The first 3 or 4 nav items got all the attention. Everything past that was invisible unless you went looking.</li>
       <li>The hamburger menu and the floating "candy box" both opened the same list. Two doors, one room.</li>
@@ -1474,7 +1549,7 @@
     </ul>
 
     <h2>Understanding Users</h2>
-    <p>We spoke to 8 MyJio users — phone calls and in-person. Quick, structured conversations focused on how they actually used the app and what they thought it was for.</p>
+    <p>We spoke to 8 MyJio users - phone calls and in-person. Quick, structured conversations focused on how they actually used the app and what they thought it was for.</p>
   </div>
 
   <!-- Affinity map image -->
@@ -1484,63 +1559,71 @@
   </figure>
 
   <div class="case-body">
+      <div class="sensitive-banner">
+        <span class="sensitive-banner-icon">🔒</span>
+        <div class="sensitive-banner-text">
+          <strong>Some details have been altered or omitted.</strong>
+          Specific metrics, component names, and internal tooling are masked to respect NDA obligations. The process, decisions, and outcomes are real.
+        </div>
+      </div>
+      
     <h2>How Might We…</h2>
     <ul class="hmw-list">
       <li><span class="hmw-num">1</span> How do we show people what the app can do before they've decided it's just for recharges?</li>
       <li><span class="hmw-num">2</span> How do we redesign navigation so mini-apps are found, not buried?</li>
       <li><span class="hmw-num">3</span> How do we make the homepage feel like a place worth spending time, not just a utility screen?</li>
-      <li><span class="hmw-num">4</span> How do we interrupt the "open, recharge, close" habit — without being annoying about it?</li>
+      <li><span class="hmw-num">4</span> How do we interrupt the "open, recharge, close" habit - without being annoying about it?</li>
       <li><span class="hmw-num">5</span> How do we give people a reason to come back to the mini-apps more than once?</li>
     </ul>
 
     <h2>Design Decisions & What We Learned</h2>
-    <p>For each question, we ran two rounds of 10-minute rapid ideation internally. The strongest ideas went to wireframes. We had a hard deadline — the Annual Jio Conference — so we cut anything that wasn't high impact and fast to execute.</p>
+    <p>For each question, we ran two rounds of 10-minute rapid ideation internally. The strongest ideas went to wireframes. We had a hard deadline - the Annual Jio Conference - so we cut anything that wasn't high impact and fast to execute.</p>
 
     <div class="finding-card">
-      <div class="impact-tag">65% skipped the carousel — internal data</div>
+      <div class="impact-tag">65% skipped the carousel - internal data</div>
       <h4>1. A 7-second video worked better than a 6-slide carousel</h4>
-      <p>We thought a carousel gave users control — read at your own pace, skip what you don't care about. 65% of new users just skipped the whole thing. A short video covering the same ground in 7 seconds, with no skip option, kept people watching.</p>
+      <p>We thought a carousel gave users control - read at your own pace, skip what you don't care about. 65% of new users just skipped the whole thing. A short video covering the same ground in 7 seconds, with no skip option, kept people watching.</p>
     </div>
 
     <div class="finding-card">
-      <div class="impact-tag">7/8 users felt interrupted — internal testing</div>
-      <h4>2. Asking users what they liked — every single time — made them trust the app less</h4>
-      <p>The logic was sound: if a user reaches the end of a content tile, they're interested. Ask them what they want more of. 7 out of 8 users found it pushy. It felt like the app was trying to profile them. We dropped the explicit prompts and shifted to watching what they actually did — scroll depth, time on tile, return visits.</p>
+      <div class="impact-tag">7/8 users felt interrupted - internal testing</div>
+      <h4>2. Asking users what they liked - every single time - made them trust the app less</h4>
+      <p>The logic was sound: if a user reaches the end of a content tile, they're interested. Ask them what they want more of. 7 out of 8 users found it pushy. It felt like the app was trying to profile them. We dropped the explicit prompts and shifted to watching what they actually did - scroll depth, time on tile, return visits.</p>
     </div>
 
     <div class="finding-card">
-      <div class="impact-tag">5/8 iPhone users — high satisfaction with universal search</div>
+      <div class="impact-tag">5/8 iPhone users - high satisfaction with universal search</div>
       <h4>3. Universal search, accessible from anywhere, made the app feel much bigger</h4>
-      <p>We put a universal search bar at the top — voice included — modelled on how Safari's address bar works. iPhone users got it immediately. Trending content from across the mini-apps surfaced upfront, so even people who didn't know what they were looking for started finding things. Android users were equally comfortable with it.</p>
+      <p>We put a universal search bar at the top - voice included - modelled on how Safari's address bar works. iPhone users got it immediately. Trending content from across the mini-apps surfaced upfront, so even people who didn't know what they were looking for started finding things. Android users were equally comfortable with it.</p>
     </div>
 
     <div class="finding-card">
-      <div class="impact-tag">~45% of daily active users found widgets helpful — Jio data</div>
+      <div class="impact-tag">~45% of daily active users found widgets helpful - Jio data</div>
       <h4>4. Widgets gave users a shortcut before they'd even decided to explore</h4>
-      <p>Each mini-app got a widget with 3 CTAs — the most common things users do inside it. Jio picked the initial order based on business priority. Over time, the order would shift based on what each user actually used. Three actions per widget was a deliberate limit — more than that and nobody reads any of them.</p>
+      <p>Each mini-app got a widget with 3 CTAs - the most common things users do inside it. Jio picked the initial order based on business priority. Over time, the order would shift based on what each user actually used. Three actions per widget was a deliberate limit - more than that and nobody reads any of them.</p>
     </div>
 
     <div class="finding-card">
-      <div class="impact-tag">32% of DAUs started using mini-apps consistently — Jio data</div>
+      <div class="impact-tag">32% of DAUs started using mini-apps consistently - Jio data</div>
       <h4>5. Banners that felt personal kept people coming back for 30 days</h4>
-      <p>We stopped treating banner space as a billboard for offers. Instead, banners surfaced the mini-apps each user had already shown interest in. 32% of daily active users who tapped a banner were still using mini-apps 30 days later. That's not a conversion stat — that's a habit forming.</p>
+      <p>We stopped treating banner space as a billboard for offers. Instead, banners surfaced the mini-apps each user had already shown interest in. 32% of daily active users who tapped a banner were still using mini-apps 30 days later. That's not a conversion stat - that's a habit forming.</p>
     </div>
 
     <div class="finding-card">
-      <div class="impact-tag">65% rise in daily active user clicks — Jio data</div>
+      <div class="impact-tag">65% rise in daily active user clicks - Jio data</div>
       <h4>6. Surfacing the right mini-app at the right position in the grid made a measurable difference</h4>
       <p>The quick-access grid on the homepage reordered itself based on what each user actually opened. Apps the user rarely touched got a "Promoted" label to nudge them into trying it. Apps moved up in the grid got 65% more daily active user clicks than when they were buried in the hamburger menu.</p>
     </div>
 
     <div class="finding-card">
-      <h4>7. A five-stage notification strategy — not tested, but worth noting</h4>
-      <p>We designed notifications around triggers, actions, and variable rewards — five stages, one per mini-app. Jio wanted to focus on the homepage first, so this didn't get tested. It's still sitting there as a next-phase opportunity that I think could meaningfully extend what the homepage changes started.</p>
+      <h4>7. A five-stage notification strategy - not tested, but worth noting</h4>
+      <p>We designed notifications around triggers, actions, and variable rewards - five stages, one per mini-app. Jio wanted to focus on the homepage first, so this didn't get tested. It's still sitting there as a next-phase opportunity that I think could meaningfully extend what the homepage changes started.</p>
     </div>
 
     <h2>Key Learnings</h2>
     <ul>
-      <li>If users have decided your app does one thing, they'll never look for the other things — even if they're right there. Onboarding is the only reliable window to reframe that expectation.</li>
-      <li>Mapping the funnel before the audit meant we weren't just finding problems — we were finding the right problems.</li>
+      <li>If users have decided your app does one thing, they'll never look for the other things - even if they're right there. Onboarding is the only reliable window to reframe that expectation.</li>
+      <li>Mapping the funnel before the audit meant we weren't just finding problems - we were finding the right problems.</li>
       <li>A redesign that ships all at once is a redesign that gets blamed for every user complaint. We pushed for staged rollouts. Jio agreed. It helped.</li>
     </ul>
 
@@ -1549,7 +1632,7 @@
       <a class="proto-link" href="https://xd.adobe.com/view/e395c9ef-4eb1-4163-89fd-3de0a09f0982-b6c6/" target="_blank" rel="noopener noreferrer">
         <span class="proto-link-icon">⬡</span>
         <div>
-          <div>Full Wireframe Prototype — Flow 2</div>
+          <div>Full Wireframe Prototype - Flow 2</div>
           <div class="proto-link-meta">Adobe XD · 2 screens</div>
         </div>
         <span style="margin-left:auto;color:var(--muted);">↗</span>
@@ -1557,7 +1640,7 @@
       <a class="proto-link" href="https://xd.adobe.com/view/caf9379f-18a2-40c3-922a-dcea3d4a4381-9faa/?fullscreen=" target="_blank" rel="noopener noreferrer">
         <span class="proto-link-icon">⬡</span>
         <div>
-          <div>Final Design Prototype — MyJio App by CLA Digital</div>
+          <div>Final Design Prototype - MyJio App by CLA Digital</div>
           <div class="proto-link-meta">Adobe XD · 10 screens</div>
         </div>
         <span style="margin-left:auto;color:var(--muted);">↗</span>
@@ -1577,13 +1660,6 @@
     </div>
 
   </div>
-  <footer>
-    <p>© 2026 Vashishta Parikipandla &nbsp;·&nbsp; <span style="font-size:0.75rem;color:var(--muted);">Case studies contain representative data, altered for NDA compliance.</span></p>
-    <div class="footer-socials">
-      <a href="https://medium.com/@vashishta4381" target="_blank" rel="noopener noreferrer">Medium</a>
-      <a href="mailto:vashishta4381@gmail.com">Email</a>
-    </div>
-  </footer>
 </div>
 
 <!-- CASE: Nudges -->
@@ -1592,7 +1668,7 @@
     <button class="case-back" onclick="showPage('work')">← Back to work</button>
     <div class="case-eyebrow">Conversion Design · Best Buy India · 2024–2025</div>
     <h1 class="case-title">We moved the ask to the right moment. Opt-ins went up 43%.</h1>
-    <p class="case-subtitle">Best Buy's push notification opt-in rate was sitting at 43%. The goal was 50%. We had 7 nudge locations, only 3 doing real work, and a user segment — non-members — that nobody had properly designed for yet.</p>
+    <p class="case-subtitle">Best Buy's push notification opt-in rate was sitting at 43%. The goal was 50%. We had 7 nudge locations, only 3 doing real work, and a user segment - non-members - that nobody had properly designed for yet.</p>
     <div class="case-meta">
       <div class="case-meta-item"><label>Company</label><span>Best Buy India</span></div>
       <div class="case-meta-item"><label>My Role</label><span>Sr. Experience Designer, App Growth</span></div>
@@ -1602,7 +1678,7 @@
   </div>
 
       <div class="case-disclaimer">
-      <p><strong>Disclaimer:</strong> All screens, data, metrics, and system references shown in this case study have been altered or abstracted for confidentiality and NDA compliance. Numbers are representative and do not reflect actual business figures or internal performance data. Brand names are used solely to describe the nature of the work and carry no commercial intent. This work was completed under NDA — nothing shown constitutes a breach of confidentiality. The design process, decisions, and methodologies described are my own contributions, presented for portfolio purposes only. All opinions are my own.</p>
+      <p><strong>Disclaimer:</strong> All screens, data, metrics, and system references shown in this case study have been altered or abstracted for confidentiality and NDA compliance. Numbers are representative and do not reflect actual business figures or internal performance data. Brand names are used solely to describe the nature of the work and carry no commercial intent. This work was completed under NDA - nothing shown constitutes a breach of confidentiality. The design process, decisions, and methodologies described are my own contributions, presented for portfolio purposes only. All opinions are my own.</p>
     </div>
 
   <div class="case-cover">
@@ -1614,28 +1690,28 @@
   <div class="case-body">
 
     <h2>The situation</h2>
-    <p>Push notifications are one of Best Buy's main levers for deals, offers, and service updates — directly tied to revenue and retention. By the end of 2024, opt-in rate was at 43%. The FY2025 target was 50%. Not a massive gap on paper, but 7 percentage points across a user base of that size is a lot of people.</p>
-    <p>The app already had nudges in 7 places. Only three of them — positions 1, 3, and 6 — were driving almost all of the opt-ins. Previous attempts to improve the other placements had consistently failed. The brief from Product: find new, high-intent, contextual moments to ask — especially for non-member users — without compromising privacy or user trust.</p>
+    <p>Push notifications are one of Best Buy's main levers for deals, offers, and service updates - directly tied to revenue and retention. By the end of 2024, opt-in rate was at 43%. The FY2025 target was 50%. Not a massive gap on paper, but 7 percentage points across a user base of that size is a lot of people.</p>
+    <p>The app already had nudges in 7 places. Only three of them - positions 1, 3, and 6 - were driving almost all of the opt-ins. Previous attempts to improve the other placements had consistently failed. The brief from Product: find new, high-intent, contextual moments to ask - especially for non-member users - without compromising privacy or user trust.</p>
 
     <div class="case-callout"><p>My role was end-to-end: framing the problem, leading discovery, defining the nudge strategy, and designing the experience. Product and Analytics were in the room for data decisions and feasibility, but the UX direction was mine to own.</p></div>
 
     <h2>Why non-members</h2>
-    <p>The baseline data revealed a clear segmentation gap. Members opted in at roughly 3x the rate of non-members. But this wasn't a user demand problem — it was a design and messaging problem. Members had already been primed through loyalty context and prior app engagement. Non-members were getting the same generic nudge with zero personal relevance.</p>
-    <p>Non-members were also the bigger opportunity by far: they represented around 70% of the eligible user base but only 13% of opt-ins. A focused 10-point lift in non-member opt-in rate — from 27% to 37% — would alone contribute 5 to 6 points toward the 50% target. That's where we focused.</p>
+    <p>The baseline data revealed a clear segmentation gap. Members opted in at roughly 3x the rate of non-members. But this wasn't a user demand problem - it was a design and messaging problem. Members had already been primed through loyalty context and prior app engagement. Non-members were getting the same generic nudge with zero personal relevance.</p>
+    <p>Non-members were also the bigger opportunity by far: they represented around 70% of the eligible user base but only 13% of opt-ins. A focused 10-point lift in non-member opt-in rate - from 27% to 37% - would alone contribute 5 to 6 points toward the 50% target. That's where we focused.</p>
     <p>An in-app survey of non-members added another layer. When asked what types of notifications they'd actually want:</p>
     <ul>
-      <li>Saved Items Price Drop Notifications — 23%</li>
-      <li>Flash Sale or Limited-Time Offer Alerts — 21%</li>
-      <li>Gift Recommendations — 20.5%</li>
-      <li>Customer Service Updates — 18%</li>
-      <li>Personalised Shopping Suggestions — 7%</li>
-      <li>New Product Launch Alerts — 5%</li>
+      <li>Saved Items Price Drop Notifications - 23%</li>
+      <li>Flash Sale or Limited-Time Offer Alerts - 21%</li>
+      <li>Gift Recommendations - 20.5%</li>
+      <li>Customer Service Updates - 18%</li>
+      <li>Personalised Shopping Suggestions - 7%</li>
+      <li>New Product Launch Alerts - 5%</li>
     </ul>
-    <p>Price drops and sale alerts were clearly what non-members cared about. That shaped the copy strategy across every nudge we designed — lead with the specific value, not a generic "allow notifications" ask.</p>
+    <p>Price drops and sale alerts were clearly what non-members cared about. That shaped the copy strategy across every nudge we designed - lead with the specific value, not a generic "allow notifications" ask.</p>
 
     <h2>The Saved Items story</h2>
-    <p>This is the one I want to spend the most time on — not because it worked, but because of what happened when it didn't.</p>
-    <p>The "Saved Items &amp; Lists" page looked like a promising nudge location. Users had already shown intent by saving something. Our survey data backed it up — price drop alerts were the top thing non-members said they'd want. On the surface, the case seemed obvious.</p>
+    <p>This is the one I want to spend the most time on - not because it worked, but because of what happened when it didn't.</p>
+    <p>The "Saved Items &amp; Lists" page looked like a promising nudge location. Users had already shown intent by saving something. Our survey data backed it up - price drop alerts were the top thing non-members said they'd want. On the surface, the case seemed obvious.</p>
 
     <figure class="case-image-block">
       <img src="https://cdn-images-1.medium.com/max/2400/1*uOLcctjkbx3ek2TclYmmJw.png"
@@ -1645,17 +1721,17 @@
       <p class="img-disclaimer">Numbers, data, and UI shown are representative and do not reflect actual figures or proprietary information.</p>
     </figure>
 
-    <p>But when I looked at the actual conversion data, one number stood out: only 0.6% of users who added items to their cart from the Saved Items page went on to purchase. That's not a healthy funnel. Adding a nudge that encouraged users to hold off and wait for a price drop — which is what Product was proposing — risked making that number worse, not better.</p>
+    <p>But when I looked at the actual conversion data, one number stood out: only 0.6% of users who added items to their cart from the Saved Items page went on to purchase. That's not a healthy funnel. Adding a nudge that encouraged users to hold off and wait for a price drop - which is what Product was proposing - risked making that number worse, not better.</p>
 
     <h3>My concern with the product team's proposal</h3>
-    <p>The proposal was to show a nudge when users landed on the Saved Items page, prompting them to enable price drop alerts instead of removing items from their list. The logic made sense at a surface level. But I was worried we'd be actively interrupting users at a moment of purchase consideration and redirecting their attention toward a future event — which, given the existing 0.6% conversion rate, felt like pouring more water into a leaking bucket.</p>
+    <p>The proposal was to show a nudge when users landed on the Saved Items page, prompting them to enable price drop alerts instead of removing items from their list. The logic made sense at a surface level. But I was worried we'd be actively interrupting users at a moment of purchase consideration and redirecting their attention toward a future event - which, given the existing 0.6% conversion rate, felt like pouring more water into a leaking bucket.</p>
     <p>I pushed back. Not against nudging on this page entirely, but against nudging at the wrong moment within it.</p>
 
     <h3>What I proposed instead</h3>
-    <p>Two more contextual triggers — both of which respond to something the user is actually doing rather than just landing on a page:</p>
+    <p>Two more contextual triggers - both of which respond to something the user is actually doing rather than just landing on a page:</p>
     <ul>
-      <li><strong>Nudge when the user clicks "Edit" or tries to remove an item</strong> — that's the moment of highest relevance. "Don't remove this — we'll let you know if the price drops." The user is about to lose the item. The value of the notification is immediately obvious.</li>
-      <li><strong>Nudge when the user tries to exit the page</strong> — a soft exit-intent prompt, not an aggressive modal. "Your saved items will still be here. We'll notify you if anything changes in price." Low interruption, high relevance.</li>
+      <li><strong>Nudge when the user clicks "Edit" or tries to remove an item</strong> - that's the moment of highest relevance. "Don't remove this - we'll let you know if the price drops." The user is about to lose the item. The value of the notification is immediately obvious.</li>
+      <li><strong>Nudge when the user tries to exit the page</strong> - a soft exit-intent prompt, not an aggressive modal. "Your saved items will still be here. We'll notify you if anything changes in price." Low interruption, high relevance.</li>
     </ul>
 
     <figure class="case-image-block">
@@ -1670,34 +1746,34 @@
       <img src="https://cdn-images-1.medium.com/max/2400/1*g5EfEsw_Rd9ZKPXhquZ31w.png"
            alt="Saved Items opportunity mapping" loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
-      <figcaption>Opportunity mapping — all entry paths to Saved Items and user intent at each point</figcaption>
+      <figcaption>Opportunity mapping - all entry paths to Saved Items and user intent at each point</figcaption>
       <p class="img-disclaimer">Numbers, data, and UI shown are representative and do not reflect actual figures or proprietary information.</p>
     </figure>
 
-    <h3>What actually shipped — and what happened</h3>
+    <h3>What actually shipped - and what happened</h3>
     <p>Despite the data and the pushback, Product moved forward with the on-load nudge on the Saved Items page. Their reasoning had more to do with roadmap momentum than user behaviour. The nudge went live.</p>
-    <p>By the end of Q1 2025, it had added roughly 5,000 new opt-ins — about 0.1%. And the 0.6% purchase conversion rate had dropped to 0.3%. Exactly what we were worried about. The business team pulled the nudge.</p>
+    <p>By the end of Q1 2025, it had added roughly 5,000 new opt-ins - about 0.1%. And the 0.6% purchase conversion rate had dropped to 0.3%. Exactly what we were worried about. The business team pulled the nudge.</p>
     <p>We're now pushing for the edit-intent and exit-intent patterns to be added back to the roadmap. They haven't shipped yet.</p>
 
     <figure class="case-image-block">
       <img src="https://cdn-images-1.medium.com/max/2400/1*v0QOXE0DR_-d76ggf89y6g.gif"
            alt="Saved Items final nudge design" loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
-      <figcaption>The final on-load nudge design — the one that shipped and was later removed</figcaption>
+      <figcaption>The final on-load nudge design - the one that shipped and was later removed</figcaption>
       <p class="img-disclaimer">Numbers, data, and UI shown are representative and do not reflect actual figures or proprietary information.</p>
     </figure>
 
-    <h2>PDP to GHP — what went live and worked</h2>
-    <p>While exploring the Product Detail Page, we found a behaviour pattern worth acting on. After a user saves a product on the PDP and exits to the homepage, they're essentially done exploring for now — the homepage is their resting point. We confirmed this with CJA data: around 2 lakh clicks on the PDP-to-home path were ending the session, not continuing it.</p>
-    <p>That exit moment turned out to be a good place to ask. The user had just expressed clear intent — saved a product — and was pausing. A bottom drawer nudge offering deal alerts for that specific product felt timely, not intrusive. We A/B tested two variants: one with a "Not now" button, one with just a close icon in the corner. The close icon variant performed better — around 4% increase in overall opt-ins, adding roughly 3,000 new users in the first month. This one is live.</p>
-    <p>One thing we learned during testing: animated nudges, while visually interesting, added cognitive load at the wrong moment. A user who hasn't opted in yet is already evaluating whether to trust the ask — layering an animation on top of that made them hesitate, not engage. We kept the final design clean and static.</p>
+    <h2>PDP to GHP - what went live and worked</h2>
+    <p>While exploring the Product Detail Page, we found a behaviour pattern worth acting on. After a user saves a product on the PDP and exits to the homepage, they're essentially done exploring for now - the homepage is their resting point. We confirmed this with CJA data: around 2 lakh clicks on the PDP-to-home path were ending the session, not continuing it.</p>
+    <p>That exit moment turned out to be a good place to ask. The user had just expressed clear intent - saved a product - and was pausing. A bottom drawer nudge offering deal alerts for that specific product felt timely, not intrusive. We A/B tested two variants: one with a "Not now" button, one with just a close icon in the corner. The close icon variant performed better - around 4% increase in overall opt-ins, adding roughly 3,000 new users in the first month. This one is live.</p>
+    <p>One thing we learned during testing: animated nudges, while visually interesting, added cognitive load at the wrong moment. A user who hasn't opted in yet is already evaluating whether to trust the ask - layering an animation on top of that made them hesitate, not engage. We kept the final design clean and static.</p>
 
-    <h2>Sale event nudges — a glimpse</h2>
-    <p>Seasonal sale events — Black Friday, Back to School, Christmas — see some of the highest app traffic of the year, with a significant portion of those users having push notifications disabled. We worked on a GHP-level nudge strategy for these events: a global opt-in for sale alerts plus a product-specific SKU carousel for users who wanted to track specific items. Both global and product-specific approaches were needed because a global nudge alone would miss users who didn't see anything they wanted, and a product-specific one would miss casual browsers. This is still in progress.</p>
+    <h2>Sale event nudges - a glimpse</h2>
+    <p>Seasonal sale events - Black Friday, Back to School, Christmas - see some of the highest app traffic of the year, with a significant portion of those users having push notifications disabled. We worked on a GHP-level nudge strategy for these events: a global opt-in for sale alerts plus a product-specific SKU carousel for users who wanted to track specific items. Both global and product-specific approaches were needed because a global nudge alone would miss users who didn't see anything they wanted, and a product-specific one would miss casual browsers. This is still in progress.</p>
 
     <h2>What I took away</h2>
-    <p>The Saved Items story is the most useful thing in this case study — not because it's a win, but because it shows what happens when design intuition backed by data gets overruled by roadmap pressure. The nudge failed in exactly the way we said it would. That's not a satisfying outcome, but it's an honest one.</p>
-    <p>The bigger lesson: document everything when you have a clear, data-backed position. Not to say "I told you so" later — but because a documented hypothesis gives you the foundation to re-enter the conversation when things go wrong. That's how the edit-intent pattern is getting back on the roadmap now.</p>
+    <p>The Saved Items story is the most useful thing in this case study - not because it's a win, but because it shows what happens when design intuition backed by data gets overruled by roadmap pressure. The nudge failed in exactly the way we said it would. That's not a satisfying outcome, but it's an honest one.</p>
+    <p>The bigger lesson: document everything when you have a clear, data-backed position. Not to say "I told you so" later - but because a documented hypothesis gives you the foundation to re-enter the conversation when things go wrong. That's how the edit-intent pattern is getting back on the roadmap now.</p>
 
     <div class="medium-cta">
         <div class="medium-cta-text">
@@ -1710,23 +1786,15 @@
         <a class="btn-outline" href="https://medium.com/@vashishta4381/designing-contextual-nudges-to-uplift-app-push-notification-opt-ins-6cab626eed36" target="_blank" rel="noopener noreferrer">Read on Medium →</a>
       </div>
   </div>
-
-  <footer>
-    <p>© 2026 Vashishta Parikipandla &nbsp;·&nbsp; <span style="font-size:0.75rem;color:var(--muted);">Case studies contain representative data, altered for NDA compliance.</span></p>
-    <div class="footer-socials">
-      <a href="https://medium.com/@vashishta4381" target="_blank" rel="noopener noreferrer">Medium</a>
-      <a href="mailto:vashishta4381@gmail.com">Email</a>
-    </div>
-  </footer>
 </div>
 
 <!-- CASE: BRIX -->
-<div class="page" id="page-case-brix">
+<div class="page" id="page-case-brix" style="display:none !important;">
   <div class="case-hero">
     <button class="case-back" onclick="showPage('work')">← Back to work</button>
     <div class="case-eyebrow">Design Systems · Best Buy India · 2024</div>
     <h1 class="case-title">Our design system was doing real work. Leadership had no way to see it.</h1>
-    <p class="case-subtitle">BRIX is Best Buy's internal design system — built at significant investment to bring consistency across products. The problem wasn't the system. It was that nobody outside the team could measure what it was actually doing.</p>
+    <p class="case-subtitle">BRIX is Best Buy's internal design system - built at significant investment to bring consistency across products. The problem wasn't the system. It was that nobody outside the team could measure what it was actually doing.</p>
     <div class="case-meta">
       <div class="case-meta-item"><label>Company</label><span>Best Buy India</span></div>
       <div class="case-meta-item"><label>My Role</label><span>Sr. Experience Designer</span></div>
@@ -1736,7 +1804,7 @@
   </div>
 
       <div class="case-disclaimer">
-      <p><strong>Disclaimer:</strong> All screens, data, metrics, and system references shown in this case study have been altered or abstracted for confidentiality and NDA compliance. Numbers are representative and do not reflect actual business figures or internal performance data. Brand names are used solely to describe the nature of the work and carry no commercial intent. This work was completed under NDA — nothing shown constitutes a breach of confidentiality. The design process, decisions, and methodologies described are my own contributions, presented for portfolio purposes only. All opinions are my own.</p>
+      <p><strong>Disclaimer:</strong> All screens, data, metrics, and system references shown in this case study have been altered or abstracted for confidentiality and NDA compliance. Numbers are representative and do not reflect actual business figures or internal performance data. Brand names are used solely to describe the nature of the work and carry no commercial intent. This work was completed under NDA - nothing shown constitutes a breach of confidentiality. The design process, decisions, and methodologies described are my own contributions, presented for portfolio purposes only. All opinions are my own.</p>
     </div>
 
   <div class="case-cover">
@@ -1746,32 +1814,40 @@
   </div>
 
   <div class="case-body">
+      <div class="sensitive-banner">
+        <span class="sensitive-banner-icon">🔒</span>
+        <div class="sensitive-banner-text">
+          <strong>Some details have been altered or omitted.</strong>
+          Specific metrics, component names, and internal tooling are masked to respect NDA obligations. The process, decisions, and outcomes are real.
+        </div>
+      </div>
+      
 
     <p style="font-size:0.82rem;color:var(--muted);font-style:italic;margin-bottom:2rem;">Note: All data and designs shown here are altered for NDA purposes. The process, decisions, and outcomes are real.</p>
 
     <h2>What BRIX is</h2>
-    <p>BRIX is the design system built by Best Buy to bring consistency across products and reduce duplicated effort between designers and developers. It has four libraries: BRIX Enterprise (colours, typography, core components), BRIX Icons, BRIX Web, and BRIX Native. The team was set up as a direct investment from top management — hired specifically to build and maintain these systems at scale.</p>
-    <p>With that investment came accountability. Every quarter, the BRIX team needed to show the value it was adding to the business. For a while, the engineering manager had built a small internal tool that pulled from Excel sheets and generated downloadable reports. That worked — until the system started scaling fast enough that the business wanted something more visible and ongoing. That's what gave this project its start.</p>
+    <p>BRIX is the design system built by Best Buy to bring consistency across products and reduce duplicated effort between designers and developers. It has four libraries: BRIX Enterprise (colours, typography, core components), BRIX Icons, BRIX Web, and BRIX Native. The team was set up as a direct investment from top management - hired specifically to build and maintain these systems at scale.</p>
+    <p>With that investment came accountability. Every quarter, the BRIX team needed to show the value it was adding to the business. For a while, the engineering manager had built a small internal tool that pulled from Excel sheets and generated downloadable reports. That worked - until the system started scaling fast enough that the business wanted something more visible and ongoing. That's what gave this project its start.</p>
 
     <h2>Where I came in</h2>
-    <p>Suyash and Shivani had been leading the project for three weeks when I joined. By that point there was already an information architecture and a first draft of wireframes. My role was to come in, absorb the context quickly, and help push the design from a functional skeleton to something that actually communicated the system's value clearly — both visually and structurally.</p>
-    <p>Getting up to speed fast was its own challenge. I was new to the organisation, the BRIX team had their own terminology (much of it engineering-side), and there were tracking gaps on the design side — component reuse in Figma wasn't being measured the same way as code-side adoption. Getting everyone to agree on a shared language before designing anything was necessary and took time.</p>
+    <p>Suyash and Shivani had been leading the project for three weeks when I joined. By that point there was already an information architecture and a first draft of wireframes. My role was to come in, absorb the context quickly, and help push the design from a functional skeleton to something that actually communicated the system's value clearly - both visually and structurally.</p>
+    <p>Getting up to speed fast was its own challenge. I was new to the organisation, the BRIX team had their own terminology (much of it engineering-side), and there were tracking gaps on the design side - component reuse in Figma wasn't being measured the same way as code-side adoption. Getting everyone to agree on a shared language before designing anything was necessary and took time.</p>
 
     <figure class="case-image-block">
       <img src="https://cdn-images-1.medium.com/max/1600/1*eqis3sLqjzU8mL2TspJOOA.png"
            alt="Target users and persona understanding" loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
-      <figcaption>Target users — top management and BRIX leads had very different information needs</figcaption>
+      <figcaption>Target users - top management and BRIX leads had very different information needs</figcaption>
       <p class="img-disclaimer">Numbers, data, and UI shown are representative and do not reflect actual figures or proprietary information.</p>
     </figure>
 
     <h2>What we were designing for</h2>
-    <p>Two types of users, one dashboard. Top management needed a summary — adoption trends, ROI, system health at a glance. The BRIX Engineering and Design Managers needed something more detailed — which components had debt, where legacy usage was still high, where the team should focus next.</p>
+    <p>Two types of users, one dashboard. Top management needed a summary - adoption trends, ROI, system health at a glance. The BRIX Engineering and Design Managers needed something more detailed - which components had debt, where legacy usage was still high, where the team should focus next.</p>
     <p>We aligned early on three design principles that shaped every decision:</p>
     <ul>
-      <li><strong>Content personalisation</strong> — surface the right level of detail to the right person</li>
-      <li><strong>Better data visualisation</strong> — replace static numbers with visuals that actually told a story</li>
-      <li><strong>Visual alignment with BRIX</strong> — the dashboard should look like the system it was measuring</li>
+      <li><strong>Content personalisation</strong> - surface the right level of detail to the right person</li>
+      <li><strong>Better data visualisation</strong> - replace static numbers with visuals that actually told a story</li>
+      <li><strong>Visual alignment with BRIX</strong> - the dashboard should look like the system it was measuring</li>
     </ul>
 
     <figure class="case-image-block">
@@ -1783,21 +1859,21 @@
     </figure>
 
     <h2>Ideation and early feedback</h2>
-    <p>Time overlap between team members was limited — we were working across different schedules — so we ran structured feedback calls instead of in-person workshops. That constraint actually helped. Having to present direction on a call forced us to be specific about what we were proposing and why. The feedback we got early shaped a lot of the structure: unify the terminology around "BRIX Enterprise" rather than calling it "new" vs "old"; lead with positives for top management and keep the remediation detail for the operational layer; stop showing numbers that duplicated each other without adding insight.</p>
+    <p>Time overlap between team members was limited - we were working across different schedules - so we ran structured feedback calls instead of in-person workshops. That constraint actually helped. Having to present direction on a call forced us to be specific about what we were proposing and why. The feedback we got early shaped a lot of the structure: unify the terminology around "BRIX Enterprise" rather than calling it "new" vs "old"; lead with positives for top management and keep the remediation detail for the operational layer; stop showing numbers that duplicated each other without adding insight.</p>
 
     <figure class="case-image-block">
       <img src="https://cdn-images-1.medium.com/max/1600/1*UY0uk4DoY9sDjmkaitepcQ.png"
            alt="Ideation and initial feedback sessions" loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
-      <figcaption>Feedback sessions — structured calls over shared docs instead of whiteboard sessions</figcaption>
+      <figcaption>Feedback sessions - structured calls over shared docs instead of whiteboard sessions</figcaption>
       <p class="img-disclaimer">Numbers, data, and UI shown are representative and do not reflect actual figures or proprietary information.</p>
     </figure>
 
     <h2>The design decisions that mattered</h2>
     <p>A few specific calls are worth naming because they changed the feel of the dashboard significantly:</p>
     <ul>
-      <li><strong>The circular volume visualisation for adoption rate was removed.</strong> It looked sophisticated but it didn't communicate change over time. A static donut chart tells you where you are — it doesn't show momentum. We replaced it with a trend-based view that made progress visible at a glance.</li>
-      <li><strong>The component table got richer.</strong> Not all components take the same time and effort to build — a complex data table is a very different investment than a button. We added a complexity and cost-to-build column so that leadership could see where the team was actually spending its time, not just count components as if they were equivalent units.</li>
+      <li><strong>The circular volume visualisation for adoption rate was removed.</strong> It looked sophisticated but it didn't communicate change over time. A static donut chart tells you where you are - it doesn't show momentum. We replaced it with a trend-based view that made progress visible at a glance.</li>
+      <li><strong>The component table got richer.</strong> Not all components take the same time and effort to build - a complex data table is a very different investment than a button. We added a complexity and cost-to-build column so that leadership could see where the team was actually spending its time, not just count components as if they were equivalent units.</li>
       <li><strong>Side sheets were restructured around browsing behaviour.</strong> The original layout put information in the order it was easiest to pull from the data, not the order a person would want to read it. We reorganised them so the most decision-relevant information came first, with supporting detail further down.</li>
       <li><strong>Old repositories were removed from calculations.</strong> They were inflating certain metrics without reflecting current usage. Cleaning that out made the numbers more honest and the comparisons more useful.</li>
     </ul>
@@ -1811,7 +1887,7 @@
     </figure>
 
     <h2>New screens</h2>
-    <p>A few of the final screens — hover to pause the carousel.</p>
+    <p>A few of the final screens - hover to pause the carousel.</p>
 
     <div class="brix-carousel-wrap">
       <div class="brix-carousel" id="brixCarousel">
@@ -1826,10 +1902,10 @@
 
     <h2>What we heard back</h2>
     <p>This was an internal tool, so there were no hard metrics to measure against. But when we asked stakeholders after the handoff, the feedback was consistent: the dashboard made the system's value legible in a way the Excel reports never had. Top management could see adoption trends without asking the engineering manager to interpret the data for them. The BRIX leads could drill into component-level detail without switching between tools.</p>
-    <p>The broader win was less visible but more important: by designing the dashboard to align visually with BRIX itself, we made the case in the most direct way possible that the system was mature enough to be used — even for internal tooling.</p>
+    <p>The broader win was less visible but more important: by designing the dashboard to align visually with BRIX itself, we made the case in the most direct way possible that the system was mature enough to be used - even for internal tooling.</p>
 
     <h2>What I took away</h2>
-    <p>Dashboards are not summaries of everything — they're summaries of the right things. The earlier version of this dashboard tried to show all the data it could access. The version we shipped showed the data that helped specific people make specific decisions. That distinction sounds obvious but it's easy to lose when the data is complex and stakeholders have different needs.</p>
+    <p>Dashboards are not summaries of everything - they're summaries of the right things. The earlier version of this dashboard tried to show all the data it could access. The version we shipped showed the data that helped specific people make specific decisions. That distinction sounds obvious but it's easy to lose when the data is complex and stakeholders have different needs.</p>
     <p>The other thing: working in a team that started before you is a different skill than starting fresh. You have to absorb context fast, understand what's already been decided and why, and find the gaps worth filling rather than trying to redo everything. That's something I got better at on this project.</p>
 
     <div class="medium-cta">
@@ -1837,20 +1913,12 @@
           <div class="medium-icon">M</div>
           <div>
             <div class="medium-cta-label">Read the full article on Medium</div>
-            <div class="medium-cta-title">BRIX Dashboard — better organisation and visualisation of design system data</div>
+            <div class="medium-cta-title">BRIX Dashboard - better organisation and visualisation of design system data</div>
           </div>
         </div>
         <a class="btn-outline" href="https://medium.com/@vashishta4381/brix-dashboard-design-better-organisation-and-visualisation-of-data-and-alignment-with-brix-97289fcf52fe" target="_blank" rel="noopener noreferrer">Read on Medium →</a>
       </div>
   </div>
-
-  <footer>
-    <p>© 2026 Vashishta Parikipandla &nbsp;·&nbsp; <span style="font-size:0.75rem;color:var(--muted);">Case studies contain representative data, altered for NDA compliance.</span></p>
-    <div class="footer-socials">
-      <a href="https://medium.com/@vashishta4381" target="_blank" rel="noopener noreferrer">Medium</a>
-      <a href="mailto:vashishta4381@gmail.com">Email</a>
-    </div>
-  </footer>
 </div>
 
 <!-- CASE: DPDP -->
@@ -1859,7 +1927,7 @@
     <button class="case-back" onclick="showPage('work')">← Back to work</button>
     <div class="case-eyebrow">Privacy Design · AI-Powered Sprint · 2024</div>
     <h1 class="case-title">India passed a data privacy law. We made it something users could actually use.</h1>
-    <p class="case-subtitle">Privasync is a consent management platform built for the DPDP Act — one side for everyday citizens managing their data, one side for companies handling compliance. Designed from research to MVP in about 1.5 weeks, leaning hard into AI tools while staying in the driver's seat throughout.</p>
+    <p class="case-subtitle">Privasync is a consent management platform built for the DPDP Act - one side for everyday citizens managing their data, one side for companies handling compliance. Designed from research to MVP in about 1.5 weeks, leaning hard into AI tools while staying in the driver's seat throughout.</p>
     <div class="case-meta">
       <div class="case-meta-item"><label>Client</label><span>Phence Private Limited</span></div>
       <div class="case-meta-item"><label>My Role</label><span>Lead Designer</span></div>
@@ -1871,136 +1939,128 @@
   <div class="case-cover">
     <figure class="case-image-block" style="max-width:900px;margin:0 auto;padding:0 5vw;">
       <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*RHzI9nYoJkm3MNGk0c5JpA.png"
-           alt="Privasync — DPDP consent management platform"
+           alt="Privasync - DPDP consent management platform"
            loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
     </figure>
   </div>
 
     <div class="case-disclaimer">
-      <p><strong>Disclaimer:</strong> All screens, data, metrics, and system references shown in this case study have been altered or abstracted for confidentiality and NDA compliance. Numbers are representative and do not reflect actual business figures or internal performance data. Brand names are used solely to describe the nature of the work and carry no commercial intent. This work was completed under NDA — nothing shown constitutes a breach of confidentiality. The design process, decisions, and methodologies described are my own contributions, presented for portfolio purposes only. All opinions are my own.</p>
+      <p><strong>Disclaimer:</strong> All screens, data, metrics, and system references shown in this case study have been altered or abstracted for confidentiality and NDA compliance. Numbers are representative and do not reflect actual business figures or internal performance data. Brand names are used solely to describe the nature of the work and carry no commercial intent. This work was completed under NDA - nothing shown constitutes a breach of confidentiality. The design process, decisions, and methodologies described are my own contributions, presented for portfolio purposes only. All opinions are my own.</p>
     </div>
 
   <div class="case-body">
 
     <h2>Why this project</h2>
-    <p>In August 2023, India passed the Digital Personal Data Protection Act — a defining law that puts real accountability on companies around how they collect, store, and delete personal data. Unlike GDPR or CCPA, the DPDP Act is designed for India's scale: hundreds of millions of mobile-first users with widely varying digital literacy levels. The law isn't just asking for better privacy policies. It's asking for tools that make compliance transparent and usable on both sides — for the person whose data it is, and for the company responsible for it.</p>
-    <p>When MeitY announced a design challenge around the Act, Phence Private Limited asked me to lead the design of Privasync — a two-sided consent management platform responding directly to what the law requires.</p>
+    <p>In August 2023, India passed the Digital Personal Data Protection Act - a defining law that puts real accountability on companies around how they collect, store, and delete personal data. Unlike GDPR or CCPA, the DPDP Act is designed for India's scale: hundreds of millions of mobile-first users with widely varying digital literacy levels. The law isn't just asking for better privacy policies. It's asking for tools that make compliance transparent and usable on both sides - for the person whose data it is, and for the company responsible for it.</p>
+    <p>When MeitY announced a design challenge around the Act, Phence Private Limited asked me to lead the design of Privasync - a two-sided consent management platform responding directly to what the law requires.</p>
 
     <div class="case-callout"><p>This project was close to me personally. Privacy and data control are things I care about. Getting a chance to design a product that treated consent as an experience rather than a checkbox felt worth doing properly.</p></div>
 
     <h2>What Privasync needed to be</h2>
     <p>The law created two distinct users who needed completely different products:</p>
     <ul>
-      <li><strong>Data Principals</strong> — everyday citizens who want to see which companies have their data, manage their consent, and raise access or deletion requests without needing a law degree to do it</li>
-      <li><strong>Chief Compliance Officers (CCOs) and privacy teams</strong> — company-side roles responsible for receiving and responding to those requests, building automated workflows, and demonstrating compliance to regulators</li>
+      <li><strong>Data Principals</strong> - everyday citizens who want to see which companies have their data, manage their consent, and raise access or deletion requests without needing a law degree to do it</li>
+      <li><strong>Chief Compliance Officers (CCOs) and privacy teams</strong> - company-side roles responsible for receiving and responding to those requests, building automated workflows, and demonstrating compliance to regulators</li>
     </ul>
     <p>The key highlights of the Act that shaped almost every design decision: informed consent is mandatory before any personal data is processed; every Data Principal has the right to access, correct, delete, or restrict their data; companies must respond to requests within defined timelines; non-compliance can lead to fines of up to ₹250 crore or more.</p>
 
     <h2>Who helped shape it</h2>
-    <p>I wasn't working alone. Varun Thopucherla (CEO) and Amarnath (CTO) at Phence gave me consistent feedback from a non-designer, operations, and technical implementation lens. They helped validate user flows, simplify things I'd over-engineered, and keep the design grounded in what could actually be built. That kind of input — from people who think about systems rather than screens — made a real difference to the quality of what we produced.</p>
+    <p>I wasn't working alone. Varun Thopucherla (CEO) and Amarnath (CTO) at Phence gave me consistent feedback from a non-designer, operations, and technical implementation lens. They helped validate user flows, simplify things I'd over-engineered, and keep the design grounded in what could actually be built. That kind of input - from people who think about systems rather than screens - made a real difference to the quality of what we produced.</p>
 
     <h2>Research and personas</h2>
-    <p>I started by looking at existing tools — Transcend.io, Ketch — and they were well-made but built for GDPR or CCPA. The assumptions baked into them didn't translate to India's context: the language, the scale, the mobile-first reality, the varying literacy levels. So I set those aside and mapped from the brief outward.</p>
-    <p>Two personas, built from the legal requirements and validated with the Phence team. I used them actively throughout — not just as research artefacts, but as prompts when working with AI tools. When I needed to write consent summary screens or adjust tone on legal copy, I framed the prompt around the persona first.</p>
+    <p>I started by looking at existing tools - Transcend.io, Ketch - and they were well-made but built for GDPR or CCPA. The assumptions baked into them didn't translate to India's context: the language, the scale, the mobile-first reality, the varying literacy levels. So I set those aside and mapped from the brief outward.</p>
+    <p>Two personas, built from the legal requirements and validated with the Phence team. I used them actively throughout - not just as research artefacts, but as prompts when working with AI tools. When I needed to write consent summary screens or adjust tone on legal copy, I framed the prompt around the persona first.</p>
 
     <figure class="case-image-block">
       <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*xL36hX2qXwicnTAKOFHP9A.png"
-           alt="Privasync personas — Data Principal and CCO" loading="lazy"
+           alt="Privasync personas - Data Principal and CCO" loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
-      <figcaption>Data Principal and CCO personas — used actively to frame AI prompts, not just filed away</figcaption>
+      <figcaption>Data Principal and CCO personas - used actively to frame AI prompts, not just filed away</figcaption>
       <p class="img-disclaimer">Numbers, data, and UI shown are representative and do not reflect actual figures or proprietary information.</p>
     </figure>
 
     <figure class="case-image-block">
       <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*XKaz97pWkk6e4pM9Amu37Q.png"
-           alt="Journey map — Data Principal" loading="lazy"
+           alt="Journey map - Data Principal" loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
-      <figcaption>Journey map — Data Principal: raising a data request end to end</figcaption>
+      <figcaption>Journey map - Data Principal: raising a data request end to end</figcaption>
       <p class="img-disclaimer">Numbers, data, and UI shown are representative and do not reflect actual figures or proprietary information.</p>
     </figure>
 
     <figure class="case-image-block">
       <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HAzw683dR9HaGIIv_5uXwg.png"
-           alt="Journey map — Chief Compliance Officer" loading="lazy"
+           alt="Journey map - Chief Compliance Officer" loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
-      <figcaption>Journey map — CCO: receiving, processing, and closing requests on the company side</figcaption>
+      <figcaption>Journey map - CCO: receiving, processing, and closing requests on the company side</figcaption>
       <p class="img-disclaimer">Numbers, data, and UI shown are representative and do not reflect actual figures or proprietary information.</p>
     </figure>
 
     <h2>How AI changed my process</h2>
-    <p>This was the first project where I leaned heavily into ChatGPT and Google Stitch — not to replace the design process, but to compress parts of it. ChatGPT helped me draft consent copy, write screen titles in plain language, and adjust legal tone for different literacy levels. Stitch helped me get from prompts to rough wireframes fast.</p>
-    <p>But both needed significant steering. ChatGPT would sometimes suggest flows that were legally unnecessary or too complex for an MVP. Stitch would give me four screens in four different visual styles — I had to manually fix spacing, component consistency, and hierarchy every time. The AI moved fast. I had to make sure it moved in the right direction.</p>
+    <p>This was the first project where I leaned heavily into ChatGPT and Google Stitch - not to replace the design process, but to compress parts of it. ChatGPT helped me draft consent copy, write screen titles in plain language, and adjust legal tone for different literacy levels. Stitch helped me get from prompts to rough wireframes fast.</p>
+    <p>But both needed significant steering. ChatGPT would sometimes suggest flows that were legally unnecessary or too complex for an MVP. Stitch would give me four screens in four different visual styles - I had to manually fix spacing, component consistency, and hierarchy every time. The AI moved fast. I had to make sure it moved in the right direction.</p>
 
     <figure class="case-image-block">
       <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*hCyeL40v8Fn7GdQKn-zxfQ.png"
            alt="AI-assisted design thinking process" loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
-      <figcaption>The iterative process — where AI accelerated and where human judgment took over</figcaption>
+      <figcaption>The iterative process - where AI accelerated and where human judgment took over</figcaption>
       <p class="img-disclaimer">Numbers, data, and UI shown are representative and do not reflect actual figures or proprietary information.</p>
     </figure>
 
-    <div class="case-callout"><p>A project like this — from research to a complete low-fidelity MVP — would normally take 4–5 weeks. With AI tools plus clear UX direction, we got there in about 1.5 weeks. The time savings weren't from cutting corners. They were from not having to start from a blank screen every time.</p></div>
+    <div class="case-callout"><p>A project like this - from research to a complete low-fidelity MVP - would normally take 4–5 weeks. With AI tools plus clear UX direction, we got there in about 1.5 weeks. The time savings weren't from cutting corners. They were from not having to start from a blank screen every time.</p></div>
 
-    <h2>What we built — the CCO dashboard</h2>
-    <p>The company-side product needed to give compliance teams visibility and control: incoming data requests, response workflows, consent status per user, audit trails, and reporting. The harder design problem here was learning enough about the technical side — SSO, APIs, consent lifecycle, data inventory — to design flows that were actually buildable and not just screen-deep. I had to ask better questions than I was used to asking.</p>
+    <h2>What we built - the CCO dashboard</h2>
+    <p>The company-side product needed to give compliance teams visibility and control: incoming data requests, response workflows, consent status per user, audit trails, and reporting. The harder design problem here was learning enough about the technical side - SSO, APIs, consent lifecycle, data inventory - to design flows that were actually buildable and not just screen-deep. I had to ask better questions than I was used to asking.</p>
 
     <figure class="case-image-block">
       <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*beJmYsWJrZURNU_jO9DDpA.png"
            alt="Privasync CCO dashboard screens" loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
-      <figcaption>CCO dashboard — request management, consent tracking, workflows, and compliance reporting</figcaption>
+      <figcaption>CCO dashboard - request management, consent tracking, workflows, and compliance reporting</figcaption>
       <p class="img-disclaimer">Numbers, data, and UI shown are representative and do not reflect actual figures or proprietary information.</p>
     </figure>
 
-    <h2>What we built — the citizen app</h2>
+    <h2>What we built - the citizen app</h2>
     <p>The mobile app for Data Principals had to work for someone with low digital literacy on a slow connection, and also for someone who wanted full control over every permission they'd ever given. That range pushed us toward simplicity at every step.</p>
     <p>A few specific decisions that shaped the experience:</p>
     <ul>
-      <li><strong>Onboarding in plain language</strong> — "Manage consent across 100+ brands", "Raise data rights requests in a few taps", "Built for India, built for your rights." No legal preamble.</li>
-      <li><strong>Unified request flow</strong> — company selection, request type, and description all on one screen instead of three separate steps</li>
-      <li><strong>Requests dashboard split clearly</strong> — requests you've sent vs. requests companies have sent you (like Swiggy asking for new consent) — two completely different mental models that needed to be visually separated</li>
-      <li><strong>Consent screens with clear status labels</strong> — Awaiting Response / Completed — with document upload, OTP verification, and a confirmation page that actually told you what happened next</li>
+      <li><strong>Onboarding in plain language</strong> - "Manage consent across 100+ brands", "Raise data rights requests in a few taps", "Built for India, built for your rights." No legal preamble.</li>
+      <li><strong>Unified request flow</strong> - company selection, request type, and description all on one screen instead of three separate steps</li>
+      <li><strong>Requests dashboard split clearly</strong> - requests you've sent vs. requests companies have sent you (like Swiggy asking for new consent) - two completely different mental models that needed to be visually separated</li>
+      <li><strong>Consent screens with clear status labels</strong> - Awaiting Response / Completed - with document upload, OTP verification, and a confirmation page that actually told you what happened next</li>
     </ul>
 
     <figure class="case-image-block">
       <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*4tJSCGK3EdjatcS4cjNBcw.png"
            alt="Privasync citizen app screens" loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
-      <figcaption>Data Principal app — onboarding, request flows, consent management, and profile settings</figcaption>
+      <figcaption>Data Principal app - onboarding, request flows, consent management, and profile settings</figcaption>
       <p class="img-disclaimer">Numbers, data, and UI shown are representative and do not reflect actual figures or proprietary information.</p>
     </figure>
 
     <h2>What I had to learn to design this well</h2>
     <p>The CCO experience in particular pushed me outside my usual territory. To design flows that were technically credible, I had to get comfortable with: how databases store, access, and delete data; SSO and login flows across systems; what API-level consent syncing and revocation actually involves; the full consent lifecycle from collection through to expiry and deletion; and how data inventory and mapping works in a compliance context.</p>
-    <p>None of that was natural to me. But not knowing it would have made the design superficial. I made it part of the process — asking questions until I understood the constraints well enough to design within them, not around them.</p>
+    <p>None of that was natural to me. But not knowing it would have made the design superficial. I made it part of the process - asking questions until I understood the constraints well enough to design within them, not around them.</p>
 
     <h2>Where it stands</h2>
-    <p>Privasync is still an MVP. It hasn't been built out fully or tested at scale — some peer testing with colleagues and family helped smooth out friction, but there are no usage metrics yet. The foundation is solid. Whether it gets built further depends on Phence's roadmap and the speed at which companies start taking DPDP compliance seriously.</p>
+    <p>Privasync is still an MVP. It hasn't been built out fully or tested at scale - some peer testing with colleagues and family helped smooth out friction, but there are no usage metrics yet. The foundation is solid. Whether it gets built further depends on Phence's roadmap and the speed at which companies start taking DPDP compliance seriously.</p>
 
     <h2>What I took away</h2>
-    <p>AI tools are genuinely useful when you know what you're trying to achieve. When you don't, they'll confidently generate the wrong thing in a very polished way. The speed advantage is real — but only if the person using the tool is making sharp decisions about what to keep, what to cut, and what to redo from scratch.</p>
-    <p>The other thing: privacy design is not just compliance design. The moment you treat consent as a legal requirement to satisfy rather than an experience to earn, the product stops working for the person using it. Every good decision in this project came from asking whether a real person — not a DPDP clause — would understand and trust what we'd designed.</p>
+    <p>AI tools are genuinely useful when you know what you're trying to achieve. When you don't, they'll confidently generate the wrong thing in a very polished way. The speed advantage is real - but only if the person using the tool is making sharp decisions about what to keep, what to cut, and what to redo from scratch.</p>
+    <p>The other thing: privacy design is not just compliance design. The moment you treat consent as a legal requirement to satisfy rather than an experience to earn, the product stops working for the person using it. Every good decision in this project came from asking whether a real person - not a DPDP clause - would understand and trust what we'd designed.</p>
 
     <div class="medium-cta">
         <div class="medium-cta-text">
           <div class="medium-icon">M</div>
           <div>
             <div class="medium-cta-label">Read the full article on Medium</div>
-            <div class="medium-cta-title">Building Privasync — a DPDP-compliant consent management MVP</div>
+            <div class="medium-cta-title">Building Privasync - a DPDP-compliant consent management MVP</div>
           </div>
         </div>
         <a class="btn-outline" href="https://medium.com/@vashishta4381/building-privasync-a-dpdp-compliant-consent-management-mvp-for-phence-private-limited-9a7b15404e77" target="_blank" rel="noopener noreferrer">Read on Medium →</a>
       </div>
   </div>
-
-  <footer>
-    <p>© 2026 Vashishta Parikipandla &nbsp;·&nbsp; <span style="font-size:0.75rem;color:var(--muted);">Case studies contain representative data, altered for NDA compliance.</span></p>
-    <div class="footer-socials">
-      <a href="https://medium.com/@vashishta4381" target="_blank" rel="noopener noreferrer">Medium</a>
-      <a href="mailto:vashishta4381@gmail.com">Email</a>
-    </div>
-  </footer>
 </div>
 
 <!-- CASE: Beyond the Loop -->
@@ -2009,7 +2069,7 @@
     <button class="case-back" onclick="showPage('work')">← Back to work</button>
     <div class="case-eyebrow">AI Product Design · Beyond the Loop · 2024</div>
     <h1 class="case-title">Taking an AI workspace from MVP to something teams could actually trust.</h1>
-    <p class="case-subtitle">Beyond the Loop is a European AI workspace — multi-model chat, custom assistants, document chat, hosted in Germany. They had a working MVP. I joined to figure out what was broken and help make it ready to ship.</p>
+    <p class="case-subtitle">Beyond the Loop is a European AI workspace - multi-model chat, custom assistants, document chat, hosted in Germany. They had a working MVP. I joined to figure out what was broken and help make it ready to ship.</p>
     <div class="case-meta">
       <div class="case-meta-item"><label>Client</label><span>Beyond the Loop</span></div>
       <div class="case-meta-item"><label>My Role</label><span>End-to-end product designer + dev alignment</span></div>
@@ -2019,13 +2079,13 @@
   </div>
 
       <div class="case-disclaimer">
-      <p><strong>Disclaimer:</strong> All screens, data, metrics, and system references shown in this case study have been altered or abstracted for confidentiality and NDA compliance. Numbers are representative and do not reflect actual business figures or internal performance data. Brand names are used solely to describe the nature of the work and carry no commercial intent. This work was completed under NDA — nothing shown constitutes a breach of confidentiality. The design process, decisions, and methodologies described are my own contributions, presented for portfolio purposes only. All opinions are my own.</p>
+      <p><strong>Disclaimer:</strong> All screens, data, metrics, and system references shown in this case study have been altered or abstracted for confidentiality and NDA compliance. Numbers are representative and do not reflect actual business figures or internal performance data. Brand names are used solely to describe the nature of the work and carry no commercial intent. This work was completed under NDA - nothing shown constitutes a breach of confidentiality. The design process, decisions, and methodologies described are my own contributions, presented for portfolio purposes only. All opinions are my own.</p>
     </div>
 
   <div class="case-cover">
     <figure class="case-image-block" style="max-width:900px;margin:0 auto;padding:0 5vw;">
       <img src="https://miro.medium.com/v2/resize:fit:3604/format:webp/1*AJidCJAlf6-wg_k0fEJTQw.png"
-           alt="Beyond the Loop AI workspace — final product screens"
+           alt="Beyond the Loop AI workspace - final product screens"
            width="1200" height="675" loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
     </figure>
@@ -2034,33 +2094,33 @@
   <div class="case-body">
 
     <h2>How it started</h2>
-    <p>I entered a design contest on 99designs. The founders saw the work, liked it, and reached out. They had a team, a live product, and paying customers — but the MVP was showing its age. The brief was simple: fix what's broken and get it ready for a proper launch. My role wasn't just design. I attended standups, clarified specs in dev reviews, and QA'd builds to make sure what shipped matched what was designed.</p>
+    <p>I entered a design contest on 99designs. The founders saw the work, liked it, and reached out. They had a team, a live product, and paying customers - but the MVP was showing its age. The brief was simple: fix what's broken and get it ready for a proper launch. My role wasn't just design. I attended standups, clarified specs in dev reviews, and QA'd builds to make sure what shipped matched what was designed.</p>
 
     <h2>What we were working with</h2>
-    <p>The existing product had the right ideas — multi-model chat, team admin controls, EU data hosting. But the experience had a few real problems:</p>
+    <p>The existing product had the right ideas - multi-model chat, team admin controls, EU data hosting. But the experience had a few real problems:</p>
     <ul>
       <li>Users kept choosing the wrong AI model for the task, then switching mid-conversation</li>
-      <li>Magic Write — one of the most useful features — required 4–5 clicks and a detour through a sidebar. Most users never found it</li>
+      <li>Magic Write - one of the most useful features - required 4–5 clicks and a detour through a sidebar. Most users never found it</li>
       <li>Admins had no clear view of what their teams were doing or how much they were spending</li>
-      <li>The UI was inconsistent — cobbled together from a partial local design system with no shared language between designers and devs</li>
+      <li>The UI was inconsistent - cobbled together from a partial local design system with no shared language between designers and devs</li>
     </ul>
 
     <div class="case-callout"><p>The product wasn't broken. It just required too much patience from users who didn't yet know why they should bother.</p></div>
 
     <h2>Who we were designing for</h2>
-    <p>We didn't start from scratch with personas. The business had already spoken to early customers — European startups and mid-size companies. I reverse-engineered three types from those conversations:</p>
+    <p>We didn't start from scratch with personas. The business had already spoken to early customers - European startups and mid-size companies. I reverse-engineered three types from those conversations:</p>
     <ul>
-      <li><strong>Managers and business owners</strong> — they wanted to know what was happening, what it cost, and whether their data was safe</li>
-      <li><strong>Knowledge workers and team leads</strong> — they wanted to get work done fast without fighting the interface</li>
-      <li><strong>Heavy users and analysts</strong> — they wanted to explore different models for different tasks and compare outputs</li>
+      <li><strong>Managers and business owners</strong> - they wanted to know what was happening, what it cost, and whether their data was safe</li>
+      <li><strong>Knowledge workers and team leads</strong> - they wanted to get work done fast without fighting the interface</li>
+      <li><strong>Heavy users and analysts</strong> - they wanted to explore different models for different tasks and compare outputs</li>
     </ul>
-    <p>The European angle mattered. Data hosted in Germany was a genuine differentiator against US competitors. Users needed to trust the product with company data — so trust signals had to be visible, not just in the marketing copy but in the product itself.</p>
+    <p>The European angle mattered. Data hosted in Germany was a genuine differentiator against US competitors. Users needed to trust the product with company data - so trust signals had to be visible, not just in the marketing copy but in the product itself.</p>
 
-    <h2>Navigation — making the product make sense</h2>
+    <h2>Navigation - making the product make sense</h2>
     <p>The existing nav mixed admin settings with daily workflows in no particular order. People couldn't tell where anything lived. We restructured it into three clear areas: chat and tools, settings, and a persistent sidebar for quick access to pinned assistants and recent conversations. The goal was that a new user could orient themselves in 30 seconds without reading any documentation.</p>
 
-    <h2>Model choice — stop making users guess</h2>
-    <p>People were picking models without knowing what they were for. So we explained the difference in plain language. At the start of a conversation, a set of model cards show each option with a one-line description — "Good for drafting," "Better for analysis," "Fast and lightweight." No jargon, no parameters. And if you change your mind mid-conversation, you can switch models from a dropdown without losing the thread.</p>
+    <h2>Model choice - stop making users guess</h2>
+    <p>People were picking models without knowing what they were for. So we explained the difference in plain language. At the start of a conversation, a set of model cards show each option with a one-line description - "Good for drafting," "Better for analysis," "Fast and lightweight." No jargon, no parameters. And if you change your mind mid-conversation, you can switch models from a dropdown without losing the thread.</p>
 
     <div class="case-video-block">
       <div class="case-video-label">Guided model choice + mid-chat switching</div>
@@ -2070,19 +2130,19 @@
       </div>
     </div>
 
-    <h2>Magic Write — from buried to actually used</h2>
-    <p>Before the redesign, using Magic Write meant stopping what you were doing, opening a sidebar, pasting your prompt, adjusting it, copying the output back, and retrying if it wasn't right. Four to five clicks, minimum. After the redesign, it's inline in the chat composer. Two clicks, a preview appears, and you can switch between the original and rewritten versions without leaving the flow. Usage grew 2.3x in 6 weeks after launch. That's not a design win — that's a discoverability fix that should've happened earlier.</p>
+    <h2>Magic Write - from buried to actually used</h2>
+    <p>Before the redesign, using Magic Write meant stopping what you were doing, opening a sidebar, pasting your prompt, adjusting it, copying the output back, and retrying if it wasn't right. Four to five clicks, minimum. After the redesign, it's inline in the chat composer. Two clicks, a preview appears, and you can switch between the original and rewritten versions without leaving the flow. Usage grew 2.3x in 6 weeks after launch. That's not a design win - that's a discoverability fix that should've happened earlier.</p>
 
     <div class="case-video-block">
-      <div class="case-video-label">Magic Write — before and after the workflow change</div>
+      <div class="case-video-label">Magic Write - before and after the workflow change</div>
       <div class="case-video-wrap">
         <iframe src="https://www.youtube.com/embed/jL1Q0W2J3Fo" title="Magic Write workflow demo"
           frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
       </div>
     </div>
 
-    <h2>Admin controls — giving managers something to look at</h2>
-    <p>Admins had no visibility into what their teams were doing. They couldn't track model usage, spending, or which employees were actually using the platform. We designed a dashboard that showed token spend, usage per team member, model breakdown, and monthly trends — clean enough to read in a meeting, detailed enough to make decisions from. Eighty percent of invited admins were actively using it within six weeks of launch.</p>
+    <h2>Admin controls - giving managers something to look at</h2>
+    <p>Admins had no visibility into what their teams were doing. They couldn't track model usage, spending, or which employees were actually using the platform. We designed a dashboard that showed token spend, usage per team member, model breakdown, and monthly trends - clean enough to read in a meeting, detailed enough to make decisions from. Eighty percent of invited admins were actively using it within six weeks of launch.</p>
 
     <div class="case-video-block">
       <div class="case-video-label">Admin settings and controls</div>
@@ -2092,8 +2152,8 @@
       </div>
     </div>
 
-    <h2>Marketplace — pre-built assistants to lower the barrier</h2>
-    <p>Starting from zero with a new AI tool is hard. The marketplace gave teams a library of pre-built assistants — free for the first year — organised by use case. You can import one as-is, tweak it, or build your own. Popular prompts surfaced from usage analytics, so the more teams used it, the smarter the suggestions got.</p>
+    <h2>Marketplace - pre-built assistants to lower the barrier</h2>
+    <p>Starting from zero with a new AI tool is hard. The marketplace gave teams a library of pre-built assistants - free for the first year - organised by use case. You can import one as-is, tweak it, or build your own. Popular prompts surfaced from usage analytics, so the more teams used it, the smarter the suggestions got.</p>
 
     <div class="case-video-block">
       <div class="case-video-label">Marketplace of assistants and prompts</div>
@@ -2103,12 +2163,12 @@
       </div>
     </div>
 
-    <h2>Design system — one shared language</h2>
-    <p>The inconsistency across the existing product came from there being no single source of truth for components. I consolidated the key UI patterns into a lightweight component library — not a full design system, but enough for devs to stop reinventing things every sprint. The image below shows the structure we landed on.</p>
+    <h2>Design system - one shared language</h2>
+    <p>The inconsistency across the existing product came from there being no single source of truth for components. I consolidated the key UI patterns into a lightweight component library - not a full design system, but enough for devs to stop reinventing things every sprint. The image below shows the structure we landed on.</p>
 
     <figure class="case-image-block">
       <img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*siTjyIk7ty90-TOrHNuJ7Q.png"
-           alt="Beyond the Loop — component design system overview"
+           alt="Beyond the Loop - component design system overview"
            width="1200" height="675" loading="lazy"
            style="width:100%;border-radius:4px;display:block;">
       <figcaption>Consolidated component library handed off to the dev team</figcaption>
@@ -2120,7 +2180,7 @@
     <div class="case-result">
       <div class="result-item">
         <div class="result-num">↓ 40%</div>
-        <div class="result-label">Mid-chat model switches — users chose correctly upfront more often</div>
+        <div class="result-label">Mid-chat model switches - users chose correctly upfront more often</div>
       </div>
       <div class="result-item">
         <div class="result-num">2.3×</div>
@@ -2145,28 +2205,42 @@
     </div>
 
     <h2>What I learned</h2>
-    <p>This was the project that made me realise how much of "AI product design" is really just regular product design with a different set of failure modes. The challenge isn't making the AI work — it's making the human feel like they're in control of it. People need to understand what they're choosing before they choose it. They need to know what happened and why. And the moment the product makes them feel confused or exposed, the trust is gone.</p>
-    <p>Two months was tight. I deferred a few things — gamification, onboarding flows, a few admin features — in favour of getting the core experience right. That tradeoff was worth it. The pilot feedback showed that people who understood the product trusted it quickly. That's the right foundation to build on.</p>
+    <p>This was the project that made me realise how much of "AI product design" is really just regular product design with a different set of failure modes. The challenge isn't making the AI work - it's making the human feel like they're in control of it. People need to understand what they're choosing before they choose it. They need to know what happened and why. And the moment the product makes them feel confused or exposed, the trust is gone.</p>
+    <p>Two months was tight. I deferred a few things - gamification, onboarding flows, a few admin features - in favour of getting the core experience right. That tradeoff was worth it. The pilot feedback showed that people who understood the product trusted it quickly. That's the right foundation to build on.</p>
 
     <div class="medium-cta">
         <div class="medium-cta-text">
           <div class="medium-icon">M</div>
           <div>
             <div class="medium-cta-label">Read the full article on Medium</div>
-            <div class="medium-cta-title">From idea to interface — co-creating Beyond the Loop's AI workspace</div>
+            <div class="medium-cta-title">From idea to interface - co-creating Beyond the Loop's AI workspace</div>
           </div>
         </div>
         <a class="btn-outline" href="https://medium.com/@vashishta4381/from-idea-to-interface-co-creating-beyond-the-loops-ai-workspace-from-mvp-to-market-ready-22943dbd4f80" target="_blank" rel="noopener noreferrer">Read on Medium →</a>
       </div>
   </div>
 
-  <footer>
-    <p>© 2026 Vashishta Parikipandla &nbsp;·&nbsp; <span style="font-size:0.75rem;color:var(--muted);">Case studies contain representative data, altered for NDA compliance.</span></p>
-    <div class="footer-socials">
-      <a href="https://medium.com/@vashishta4381" target="_blank" rel="noopener noreferrer">Medium</a>
-      <a href="mailto:vashishta4381@gmail.com">Email</a>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-name">Vashishta Parikipandla</span>
+        <span class="footer-role">Senior Experience Designer · Bengaluru</span>
+      </div>
+      <div class="footer-socials">
+        <a href="https://linkedin.com/in/vashishta" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://medium.com/@vashishta4381" target="_blank" rel="noopener noreferrer" title="Medium"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg></a>
+        <a href="mailto:vashishta4381@gmail.com" title="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+        <a href="https://www.instagram.com/namethedoodle/" target="_blank" rel="noopener noreferrer" title="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      </div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <span>© 2026 Vashishta Parikipandla</span>
+      <span>Case studies contain representative data, altered for NDA compliance.</span>
+      <span>Built with <a href="https://claude.ai" target="_blank" rel="noopener">Claude</a> · Hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a> · Grateful for both.</span>
+    </div>
+  </div>
+</footer>
 </div>
 
 
@@ -2303,15 +2377,15 @@
     </div>
 
     <h2>The brief</h2>
-    <p>Strata had been operating in India for over a decade — soil reinforcement, geotechnical solutions, infrastructure projects across the country. Real expertise, real track record. But their digital presence was a patchwork: separate websites for different regions, each with different structures, different depths of content, and different levels of polish. For a senior engineer evaluating vendors from a desktop in Singapore or Houston, it felt like arriving at a company that hadn't quite decided what it wanted to be globally.</p>
-    <p>The support team was fielding calls about things that should have been self-serve — case studies, product specs, technical downloads. Leads were coming in vague because the site wasn't giving people enough to make a specific ask.</p>
+    <p>Strata had been operating in India for over a decade - soil reinforcement, geotechnical solutions, infrastructure projects across the country. Real expertise, real track record. But their digital presence was a patchwork: separate websites for different regions, each with different structures, different depths of content, and different levels of polish. For a senior engineer evaluating vendors from a desktop in Singapore or Houston, it felt like arriving at a company that hadn't quite decided what it wanted to be globally.</p>
+    <p>The support team was fielding calls about things that should have been self-serve - case studies, product specs, technical downloads. Leads were coming in vague because the site wasn't giving people enough to make a specific ask.</p>
 
     <div class="case-callout">
-      <p>One platform. Global audience. Make it obvious — within a few clicks — that Strata knows what it's doing and has done it before.</p>
+      <p>One platform. Global audience. Make it obvious - within a few clicks - that Strata knows what it's doing and has done it before.</p>
     </div>
 
     <h2>The team</h2>
-    <p>I worked with Anisha Agarwal (UX Designer), Vikissha Mehta (Project Manager), Komal Angane (Content), and Anil Yadav (Engineering). We ran the project using a Double Diamond approach — broad discovery first, then a tight define-develop-deliver loop. Seven weeks, research through design.</p>
+    <p>I worked with Anisha Agarwal (UX Designer), Vikissha Mehta (Project Manager), Komal Angane (Content), and Anil Yadav (Engineering). We ran the project using a Double Diamond approach - broad discovery first, then a tight define-develop-deliver loop. Seven weeks, research through design.</p>
 
     <figure class="case-image-block">
       <div class="img-wrap">
@@ -2321,19 +2395,19 @@
           loading="lazy"
         />
       </div>
-      <figcaption>Double Diamond process — discover, define, develop, deliver — adapted to a 7-week sprint.</figcaption>
+      <figcaption>Double Diamond process - discover, define, develop, deliver - adapted to a 7-week sprint.</figcaption>
     </figure>
 
     <h2>One early call that changed the project</h2>
     <p>We kicked off with a mobile-first assumption. Standard practice, reasonable default. Then we started talking to users.</p>
-    <p>The primary audience for a B2B geotechnical platform isn't someone browsing on a train. It's a senior civil engineer doing a detailed vendor evaluation at their desk — looking at technical drawings, cross-referencing case studies, downloading spec sheets. They need density and scannability, not a stripped-down mobile flow. After a round of stakeholder interviews and user sessions, we made the call: web-first, with mobile as a supporting experience, not the lead one.</p>
+    <p>The primary audience for a B2B geotechnical platform isn't someone browsing on a train. It's a senior civil engineer doing a detailed vendor evaluation at their desk - looking at technical drawings, cross-referencing case studies, downloading spec sheets. They need density and scannability, not a stripped-down mobile flow. After a round of stakeholder interviews and user sessions, we made the call: web-first, with mobile as a supporting experience, not the lead one.</p>
 
     <div class="case-callout">
       <p>The device data backed it up. But honestly, five minutes talking to the actual users made it obvious. Nobody was doing a vendor evaluation for a soil reinforcement contractor on their phone.</p>
     </div>
 
-    <h2>What we found — the audit</h2>
-    <p>Before talking to anyone, we did a heuristic evaluation of the existing sites. Every major page, every key flow — categorised across navigation, discoverability, consistency, engagement, and content structure.</p>
+    <h2>What we found - the audit</h2>
+    <p>Before talking to anyone, we did a heuristic evaluation of the existing sites. Every major page, every key flow - categorised across navigation, discoverability, consistency, engagement, and content structure.</p>
 
     <figure class="case-image-block">
       <div class="img-wrap">
@@ -2343,20 +2417,20 @@
           loading="lazy"
         />
       </div>
-      <figcaption>Heuristic audit of the legacy site — navigation, content structure, accessibility, and engagement mapped across pages.</figcaption>
+      <figcaption>Heuristic audit of the legacy site - navigation, content structure, accessibility, and engagement mapped across pages.</figcaption>
     </figure>
 
     <p>The consistent themes:</p>
     <ul>
-      <li>No guided navigation — users landed on pages with no clear sense of what to do next</li>
+      <li>No guided navigation - users landed on pages with no clear sense of what to do next</li>
       <li>Information architecture that reflected Strata's internal structure, not how users actually look for things</li>
-      <li>Key content — case studies, product applications, certifications — buried or completely undiscoverable</li>
+      <li>Key content - case studies, product applications, certifications - buried or completely undiscoverable</li>
       <li>Visual inconsistency across pages, and a brand colour that failed basic WCAG contrast checks</li>
       <li>No search, no thought leadership, no projection of technical expertise</li>
-      <li>Content written for someone who already knew what Strata did — not someone trying to find out</li>
+      <li>Content written for someone who already knew what Strata did - not someone trying to find out</li>
     </ul>
 
-    <h2>Research — what stakeholders and users actually needed</h2>
+    <h2>Research - what stakeholders and users actually needed</h2>
     <p>We ran two tracks of interviews in parallel. On the business side: Heads of Business, Technology, Brand, Sales, and Marketing. We needed to understand the product range, the commercial goals, the brand positioning, and what they expected from the redesign. On the user side: current customers, prospective customers, and civil engineers across different specialisations.</p>
 
     <figure class="case-image-block">
@@ -2367,7 +2441,7 @@
           loading="lazy"
         />
       </div>
-      <figcaption>Synthesised findings from stakeholder and user interviews — business needs and user needs mapped separately.</figcaption>
+      <figcaption>Synthesised findings from stakeholder and user interviews - business needs and user needs mapped separately.</figcaption>
     </figure>
 
     <p>The business side wanted three things: reduce inbound support calls about basic information, capture better-qualified leads (specifically from the US market), and build something they could update dynamically without calling an agency every time.</p>
@@ -2381,7 +2455,7 @@
           loading="lazy"
         />
       </div>
-      <figcaption>Competitive analysis — mapping features, content depth, and design conventions across Strata's global competitors.</figcaption>
+      <figcaption>Competitive analysis - mapping features, content depth, and design conventions across Strata's global competitors.</figcaption>
     </figure>
 
     <h2>Who we were designing for</h2>
@@ -2395,23 +2469,23 @@
           loading="lazy"
         />
       </div>
-      <figcaption>Seven core user groups — each with different entry points, information needs, and success signals.</figcaption>
+      <figcaption>Seven core user groups - each with different entry points, information needs, and success signals.</figcaption>
     </figure>
 
     <ul>
-      <li><strong>Distributors</strong> — looking for partnership credibility: client lists, case studies, product specs, contact routes</li>
-      <li><strong>Contractors</strong> — looking for proof of relevant site experience and consultancy capability</li>
-      <li><strong>Engineers</strong> — needing technical downloads, product application data, and problem-solving references</li>
-      <li><strong>Architects &amp; Consultants</strong> — recognition, case studies, services, testimonials</li>
-      <li><strong>Corporate Partners</strong> — internal stakeholders wanting global presence overview and company updates</li>
-      <li><strong>Job Seekers</strong> — careers, culture, team, and company history</li>
-      <li><strong>Media</strong> — press releases, project showcases, expert access, media kit</li>
+      <li><strong>Distributors</strong> - looking for partnership credibility: client lists, case studies, product specs, contact routes</li>
+      <li><strong>Contractors</strong> - looking for proof of relevant site experience and consultancy capability</li>
+      <li><strong>Engineers</strong> - needing technical downloads, product application data, and problem-solving references</li>
+      <li><strong>Architects &amp; Consultants</strong> - recognition, case studies, services, testimonials</li>
+      <li><strong>Corporate Partners</strong> - internal stakeholders wanting global presence overview and company updates</li>
+      <li><strong>Job Seekers</strong> - careers, culture, team, and company history</li>
+      <li><strong>Media</strong> - press releases, project showcases, expert access, media kit</li>
     </ul>
 
     <p>These user groups became the backbone of the information architecture. Every nav decision, every page template, every content priority was run against the question: which user groups does this serve, and what does it need to do for them?</p>
 
     <h2>Restructuring the information architecture</h2>
-    <p>We built a comprehensive site map covering all pages, their priorities, their connections, and the gaps. Then we validated it — card sorting with both business stakeholders and external users — to make sure the structure made sense to the people navigating it, not just the people who built it.</p>
+    <p>We built a comprehensive site map covering all pages, their priorities, their connections, and the gaps. Then we validated it - card sorting with both business stakeholders and external users - to make sure the structure made sense to the people navigating it, not just the people who built it.</p>
 
     <figure class="case-image-block">
       <div class="img-wrap">
@@ -2421,15 +2495,15 @@
           loading="lazy"
         />
       </div>
-      <figcaption>Reworked global information architecture — validated iteratively with card sorting across stakeholders and users.</figcaption>
+      <figcaption>Reworked global information architecture - validated iteratively with card sorting across stakeholders and users.</figcaption>
     </figure>
 
-    <h2>Content flow — designing for different levels of knowledge</h2>
-    <p>A big part of this project was figuring out how to handle the range of content without overwhelming people. Strata's audience spans someone who has never heard of geosynthetics to a specialist engineer who knows the product range inside out. We worked with the content team to segment users by domain knowledge and company familiarity, then built content flows for each page around that segmentation — what gets surfaced upfront, what lives deeper, where CTAs sit.</p>
+    <h2>Content flow - designing for different levels of knowledge</h2>
+    <p>A big part of this project was figuring out how to handle the range of content without overwhelming people. Strata's audience spans someone who has never heard of geosynthetics to a specialist engineer who knows the product range inside out. We worked with the content team to segment users by domain knowledge and company familiarity, then built content flows for each page around that segmentation - what gets surfaced upfront, what lives deeper, where CTAs sit.</p>
     <p>This also shaped the UX writing: language and tone matched to where a user was in their understanding, not a single register trying to serve everyone at once.</p>
 
     <h2>Wireframes, and a deliberate shortcut</h2>
-    <p>We prototyped in Adobe XD, building out navigation, content, and interactions at low fidelity first. The original plan was to test wireframes with 15–20 users before moving to high-fidelity. We didn't. Time was tight, the content team had made significant progress on revised copy, and testing with real copy in place meant we could validate structure and language together — which gave us more useful feedback than testing structural skeletons alone.</p>
+    <p>We prototyped in Adobe XD, building out navigation, content, and interactions at low fidelity first. The original plan was to test wireframes with 15–20 users before moving to high-fidelity. We didn't. Time was tight, the content team had made significant progress on revised copy, and testing with real copy in place meant we could validate structure and language together - which gave us more useful feedback than testing structural skeletons alone.</p>
 
     <figure class="case-image-block">
       <div class="img-wrap">
@@ -2439,29 +2513,29 @@
           loading="lazy"
         />
       </div>
-      <figcaption>Low-fidelity wireframes — used to align on structure, navigation, and content hierarchy before moving to high-fidelity.</figcaption>
+      <figcaption>Low-fidelity wireframes - used to align on structure, navigation, and content hierarchy before moving to high-fidelity.</figcaption>
     </figure>
 
-    <p>We tested the high-fidelity prototypes with five participants from each primary user group — the same people we'd interviewed in research. They already had a mental model of the old site, which gave us meaningful before-and-after signal.</p>
+    <p>We tested the high-fidelity prototypes with five participants from each primary user group - the same people we'd interviewed in research. They already had a mental model of the old site, which gave us meaningful before-and-after signal.</p>
 
     <h2>Three decisions worth naming</h2>
 
     <div class="finding-card">
       <span class="impact-tag">Decision 1 · Navigation</span>
       <h4>Anchor links for overview and direct navigation</h4>
-      <p>Product pages on the old site were long and undifferentiated — you had to scroll through everything to find anything. We restructured each page with an overview section at the top and anchor links directly into the relevant content. Engineers looking for technical drawings didn't have to read the marketing intro first. Contractors looking for case studies could jump straight there. One structural change that worked for almost every user group.</p>
+      <p>Product pages on the old site were long and undifferentiated - you had to scroll through everything to find anything. We restructured each page with an overview section at the top and anchor links directly into the relevant content. Engineers looking for technical drawings didn't have to read the marketing intro first. Contractors looking for case studies could jump straight there. One structural change that worked for almost every user group.</p>
     </div>
 
     <div class="finding-card">
       <span class="impact-tag">Decision 2 · Lead capture</span>
       <h4>CAD drawings visible upfront, behind a pre-filled form</h4>
-      <p>Engineers were calling support to ask for technical drawings that already existed on the site — they just weren't findable. We made the full library of CAD drawings visible upfront on product pages. Accessing a drawing opened a pre-selected request form, pre-filtered to the relevant product. Business got qualified leads. Users got the data they needed without a phone call. The same pattern applied to consultation: free consultancy was a Strata differentiator that barely featured on the old site. We built it into every product page as a clear CTA with a pre-filtered enquiry form behind it.</p>
+      <p>Engineers were calling support to ask for technical drawings that already existed on the site - they just weren't findable. We made the full library of CAD drawings visible upfront on product pages. Accessing a drawing opened a pre-selected request form, pre-filtered to the relevant product. Business got qualified leads. Users got the data they needed without a phone call. The same pattern applied to consultation: free consultancy was a Strata differentiator that barely featured on the old site. We built it into every product page as a clear CTA with a pre-filtered enquiry form behind it.</p>
     </div>
 
     <div class="finding-card">
       <span class="impact-tag">Decision 3 · Accessibility</span>
       <h4>Negotiating brand colour to meet WCAG</h4>
-      <p>The legacy brand colour failed basic WCAG contrast checks — not edge cases, fundamental contrast ratios on body text and navigation. We went to the client's branding team with a proposal: alternate hues of the same colour family that preserved the brand feel but met the requirements. They picked the second option we suggested. The site launched fully compliant without looking like a different company. We raised it rather than quietly shipping something inaccessible. That was the right call.</p>
+      <p>The legacy brand colour failed basic WCAG contrast checks - not edge cases, fundamental contrast ratios on body text and navigation. We went to the client's branding team with a proposal: alternate hues of the same colour family that preserved the brand feel but met the requirements. They picked the second option we suggested. The site launched fully compliant without looking like a different company. We raised it rather than quietly shipping something inaccessible. That was the right call.</p>
     </div>
 
     <h2>Visual design</h2>
@@ -2474,7 +2548,7 @@
           loading="lazy"
         />
       </div>
-      <figcaption>Colour accessibility work — revised brand hues that meet WCAG contrast requirements without breaking brand identity.</figcaption>
+      <figcaption>Colour accessibility work - revised brand hues that meet WCAG contrast requirements without breaking brand identity.</figcaption>
     </figure>
 
     <figure class="case-image-block">
@@ -2485,10 +2559,10 @@
           loading="lazy"
         />
       </div>
-      <figcaption>Visual language and style guide — typography, colour, component patterns, and spacing system.</figcaption>
+      <figcaption>Visual language and style guide - typography, colour, component patterns, and spacing system.</figcaption>
     </figure>
 
-    <p>The industry context shaped a lot of the visual decisions. Geotechnical and construction is a sector that values substance over style — competitors are functional, traditional, content-heavy. There's room for modern typography and image-led design, but stakeholders and users both responded better to something authoritative and familiar rather than design-forward. The final visual language landed in the middle: cleaner than the old site, more contemporary, but not so far from the industry norm that it felt like a different kind of company. That constraint produced better decisions than a blank brief would have.</p>
+    <p>The industry context shaped a lot of the visual decisions. Geotechnical and construction is a sector that values substance over style - competitors are functional, traditional, content-heavy. There's room for modern typography and image-led design, but stakeholders and users both responded better to something authoritative and familiar rather than design-forward. The final visual language landed in the middle: cleaner than the old site, more contemporary, but not so far from the industry norm that it felt like a different kind of company. That constraint produced better decisions than a blank brief would have.</p>
 
     <figure class="case-image-block">
       <div class="img-wrap">
@@ -2498,11 +2572,11 @@
           loading="lazy"
         />
       </div>
-      <figcaption>Responsive design — mobile as a supporting experience, with the full content architecture available across breakpoints.</figcaption>
+      <figcaption>Responsive design - mobile as a supporting experience, with the full content architecture available across breakpoints.</figcaption>
     </figure>
 
     <h2>Handoff and delivery</h2>
-    <p>We worked closely with the engineering team through the build — cross-checking implementations against final designs, giving feedback as pages went live. The project hit friction in the development phase and I ended up taking on responsibilities outside my original scope to keep it moving. That's not always the plan. But it's the right call when the alternative is watching the timeline slip.</p>
+    <p>We worked closely with the engineering team through the build - cross-checking implementations against final designs, giving feedback as pages went live. The project hit friction in the development phase and I ended up taking on responsibilities outside my original scope to keep it moving. That's not always the plan. But it's the right call when the alternative is watching the timeline slip.</p>
 
     <figure class="case-image-block">
       <div class="img-wrap">
@@ -2512,7 +2586,7 @@
           loading="lazy"
         />
       </div>
-      <figcaption>Design handoff — annotated specs, component documentation, and interaction notes for the engineering team.</figcaption>
+      <figcaption>Design handoff - annotated specs, component documentation, and interaction notes for the engineering team.</figcaption>
     </figure>
 
     <h2>What changed</h2>
@@ -2533,10 +2607,10 @@
       </div>
     </div>
 
-    <p>The support call reduction was the one I cared about most. It was the clearest signal that the information architecture had worked — that the things people used to call and ask for were now findable. The studio's digital team continued monitoring the site after launch for the next round of improvements.</p>
+    <p>The support call reduction was the one I cared about most. It was the clearest signal that the information architecture had worked - that the things people used to call and ask for were now findable. The studio's digital team continued monitoring the site after launch for the next round of improvements.</p>
 
     <h2>What I took from it</h2>
-    <p>This project ran during the first months of the pandemic. Every interview, workshop, stakeholder review, and usability test happened remotely. You adapt. But looking back, it genuinely shaped how I work — virtual research requires more structure, not less. You lose the ambient signal you get in a room with someone, so your questions have to be sharper.</p>
+    <p>This project ran during the first months of the pandemic. Every interview, workshop, stakeholder review, and usability test happened remotely. You adapt. But looking back, it genuinely shaped how I work - virtual research requires more structure, not less. You lose the ambient signal you get in a room with someone, so your questions have to be sharper.</p>
     <p>The bigger lesson was about industry-specific design. I came in thinking there was a clear opportunity to push the visual language further. The research told a different story. In a high-stakes B2B context, a site that looks too designed can actually raise questions about whether it's the right kind of company. Working within that constraint produced better design decisions than a blank brief would have.</p>
 
     <!-- Medium CTA -->
