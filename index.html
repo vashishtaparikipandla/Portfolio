@@ -1708,12 +1708,52 @@
   .ls-section { padding-top: 4rem; padding-bottom: 3rem; }
   .ls-sub { color: #666; font-size: 0.95rem; line-height: 1.6; margin-top: 0.55rem; max-width: 60ch; }
   .ls-stage { margin-top: 2.4rem; }
-  .ls-card { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 0; background: #fff; border: 1px solid var(--border); border-radius: 20px; overflow: hidden; height: 500px; }
-  .ls-illo { background: linear-gradient(135deg, #FDF0E8 0%, #F6DDCE 100%); display: flex; align-items: center; justify-content: center; padding: 1.75rem; position: relative; height: 100%; }
-  .ls-illo img { width: 100%; height: 100%; object-fit: contain; border-radius: 12px; display: block; }
+  .ls-card {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 0;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 460px;
+    align-items: stretch;
+    transition: min-height 0.35s ease;
+  }
+  .ls-illo {
+    background: linear-gradient(135deg, #FDF0E8 0%, #F6DDCE 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    min-height: 0;
+    align-self: stretch;
+  }
+  .ls-illo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
+    max-height: 420px;
+  }
   .ls-illo.ls-quote { padding: 2.5rem; }
   .ls-quote-text { font-family: 'Caveat', cursive; font-weight: 600; color: var(--accent); font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.25; text-align: center; }
-  .ls-content { padding: 2.4rem 2.7rem; display: flex; flex-direction: column; justify-content: center; height: 100%; overflow-y: auto; }
+  .ls-content {
+    padding: 2.4rem 2.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: stretch;
+    overflow: visible;
+    opacity: 1;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+  }
+  .ls-content.ls-fade {
+    opacity: 0;
+    transform: translateY(6px);
+  }
   .ls-pill { align-self: flex-start; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--accent); background: #FDF0E8; padding: 0.3rem 0.75rem; border-radius: 100px; margin-bottom: 1.05rem; }
   .ls-title { font-family: var(--serif); font-weight: 800; font-size: clamp(1.25rem, 2vw, 1.55rem); letter-spacing: -0.02em; line-height: 1.28; margin-bottom: 1rem; }
   .ls-story p { font-size: 0.94rem; line-height: 1.75; color: #3a3a3a; margin: 0 0 0.8rem; }
@@ -1729,10 +1769,11 @@
   .ls-btn:disabled { opacity: 0.3; cursor: not-allowed; transform: none; background: var(--ink); }
   .ls-counter { font-family: var(--serif); font-weight: 700; font-size: 0.82rem; color: var(--muted); letter-spacing: 0.04em; }
   @media (max-width: 760px) {
-    .ls-card { grid-template-columns: 1fr; height: auto; }
-    .ls-illo { height: 220px; padding: 1.1rem; }
+    .ls-card { grid-template-columns: 1fr; min-height: 0; }
+    .ls-illo { min-height: 220px; height: 240px; padding: 1.25rem; }
+    .ls-illo img { max-height: 220px; }
     .ls-illo.ls-quote { height: auto; padding: 2rem 1.5rem; }
-    .ls-content { height: auto; overflow: visible; padding: 1.7rem 1.4rem; }
+    .ls-content { overflow: visible; padding: 1.7rem 1.4rem; }
     .ls-nav { gap: 0.6rem; }
     .ls-btn { padding: 0.65rem 1rem; font-size: 0.8rem; }
   }
@@ -2027,8 +2068,16 @@
   function go(n){
     if (n < 0) n = 0;
     if (n >= LS.length){ render(0); return; }
-    render(n);
-    var c = document.querySelector('.ls-content'); if (c) c.scrollTop = 0;
+    var c = document.querySelector('.ls-content');
+    if (c) {
+      c.classList.add('ls-fade');
+      setTimeout(function(){
+        render(n);
+        c.classList.remove('ls-fade');
+      }, 200);
+    } else {
+      render(n);
+    }
   }
 
   function init(){
@@ -5104,6 +5153,9 @@
     document.getElementById('page-' + name).classList.add('active');
     const navEl = document.getElementById('nav-' + name);
     if (navEl) navEl.classList.add('active');
+    // Restore footer when on a regular page
+    const siteFooter = document.querySelector('.site-footer');
+    if (siteFooter) siteFooter.style.display = '';
     window.scrollTo(0, 0);
     if (typeof lucide !== 'undefined') lucide.createIcons();
   }
@@ -5115,6 +5167,9 @@
     if (page) page.classList.add('active');
     const navEl = document.getElementById('nav-work');
     if (navEl) navEl.classList.add('active');
+    // Hide footer so its dark background doesn't bleed above case pages
+    const siteFooter = document.querySelector('.site-footer');
+    if (siteFooter) siteFooter.style.display = 'none';
     window.scrollTo(0, 0);
     if (typeof lucide !== 'undefined') lucide.createIcons();
   }
